@@ -2,15 +2,15 @@ import React from "react";
 import Image from "next/image";
 import Heroimage from "../../../public/Heroimage.jpg";
 import { counselorOptions } from "@/data/counselorOptions";
-
+import { MdOutlinePhoneInTalk } from "react-icons/md";
 const ImageBgSection = () => {
   return (
-    <div className=" bg-customLightgreen py-10 flex justify-center items-center flex-1">
-      <div className="flex flex-col justify-center items-center w-11/12 mx-auto gap-5">
+    <div className=" bg-customLightgreen py-10 flex justify-center items-center flex-1 overflow-clip ">
+      <div className="flex flex-col justify-center items-center w-11/12 mx-auto gap-5 overflow-hidden ">
         <div className="relative">
-          <div className="overflow-hidden  rounded-3xl ">
+          <div className="overflow-clip  rounded-2xl ">
             <Image
-              className="aspect-video rounded-3xl blur-sm h-96 object-cover "
+              className="aspect-video rounded-2xl blur-sm h-96 object-cover "
               src={Heroimage}
               alt="Hero Background"
             />
@@ -26,14 +26,23 @@ const ImageBgSection = () => {
             </button>
           </div>
         </div>
-      
-      <div className="flex bg-red-500 flex-1 justify-between  w-full">
-        {counselorOptions.map((data) => (
-          <div key={data.id} className="bg-white flex flex-col gap-3 justify-center items-center rounded-3xl">
-            <p>{data.icon}</p>
-          </div>
-        ))}
-      </div></div>
+
+        <div className="flex w-full flex-wrap px-5 gap-8 justify-between">
+          {counselorOptions.map((data) => (
+            <div
+              key={data.id}
+              className="bg-white mx-auto flex p-5 flex-col justify-between items-center rounded-2xl w-52 h-52  md:w-60 md:h-48"
+            >
+              <div className={` ${data.bg} flex justify-center items-center p-10 rounded-full w-24 h-24 md:w-28 md:h-28`} >
+                <p className="text-6xl text-white"><MdOutlinePhoneInTalk/></p>
+              </div>
+              <p className="font-semibold text-center text-lg text-customGreen mt-4">
+                {data.name}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
