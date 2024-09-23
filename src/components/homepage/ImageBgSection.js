@@ -38,7 +38,7 @@ const ImageBgSection = () => {
   const whatsappNumber = "9260960495";
   const message = "Hello! I'd like to know more about your services.";
   return (
-    <div className=" bg-customLightgreen py-10 flex flex-col justify-center items-center flex-1 overflow-clip ">
+    <div className=" bg-customLightgreen pt-10 flex flex-col justify-center items-center flex-1 overflow-clip ">
       <div className="flex flex-col justify-center items-center w-10/12 mx-auto gap-5 overflow-hidden ">
         <div className="relative">
           <div className="overflow-clip rounded-2xl ">
@@ -87,7 +87,7 @@ const ImageBgSection = () => {
           ))}
         </div>
       </div>
-      <div className="flex flex-col gap-6 sm:gap-10 justify-center w-full mt-10 sm:mt-20 py-8 sm:py-14 items-center flex-1 bg-[#dee3e0] ">
+      <div className="flex flex-col gap-6 sm:gap-10 justify-center w-full mt-10 sm:mt-20 py-8 sm:py-14 items-center flex-1 bg-customLightgreen2 ">
       <p className=" text-xl sm:text-4xl font-bold text-customGreen" >Your Path to Mental Wellness</p>
       <div className=" w-10/12 flex flex-col justify-center items-center mx-auto gap-5">
         <div className=" grid grid-cols-2 sm:flex w-full flex-wrap gap-4 items-stretch justify-between">
@@ -114,7 +114,6 @@ const ImageBgSection = () => {
         </div>
       </div>
       </div>
-      <div className="bg-white" >g</div>
     </div>
   );
 };
