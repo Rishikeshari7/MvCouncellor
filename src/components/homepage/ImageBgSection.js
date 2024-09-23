@@ -1,9 +1,18 @@
 import React from "react";
 import Image from "next/image";
 import Heroimage from "../../../public/Heroimage.jpg";
-import { counselorOptions } from "@/data/counselorOptions";
+// import { counselorOptions } from "@/data/counselorOptions";
+import { FaClipboardCheck, FaCalendarAlt } from 'react-icons/fa';
+import { BsWhatsapp } from "react-icons/bs";
+import { MdOutlinePhoneInTalk } from "react-icons/md";
 
 const ImageBgSection = () => {
+  const counselorOptions = [
+    { id: 1, name: "Chat with Counsellor", icon: <BsWhatsapp  />,bgColor:"bg-pink-400" },
+    { id: 2, name: "Talk to Psychologist", icon: <MdOutlinePhoneInTalk />,bgColor:"bg-teal-400" },
+    { id: 3, name: "Get a Consultation", icon: <FaClipboardCheck />,bgColor:"bg-blue-400" },
+    { id: 4, name: "Book an Appointment", icon: <FaCalendarAlt />,bgColor:"bg-orange-400" },
+  ];
   return (
     <div className=" bg-customLightgreen py-10 flex justify-center items-center flex-1 overflow-clip ">
       <div className="flex flex-col justify-center items-center w-11/12 mx-auto gap-5 overflow-hidden ">
