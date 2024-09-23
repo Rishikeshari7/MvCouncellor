@@ -11,7 +11,8 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         customLightgreen:"#6A9C89",
-        customGreen:"#16423C"
+        customGreen:"#16423C",
+        customGreen2:"#21635A"
       },
     },
   },
