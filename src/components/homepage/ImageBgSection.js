@@ -2,11 +2,12 @@ import React from "react";
 import Image from "next/image";
 import Heroimage from "../../../public/Heroimage.jpg";
 import { counselorOptions } from "@/data/counselorOptions";
-
+import { services } from "@/data/services";
+ 
 const ImageBgSection = () => {
   return (
     <div className=" bg-customLightgreen py-10 flex justify-center items-center flex-1 overflow-clip ">
-      <div className="flex flex-col justify-center items-center w-11/12 mx-auto gap-5 overflow-hidden ">
+      <div className="flex flex-col justify-center items-center w-10/12 mx-auto gap-5 overflow-hidden ">
         <div className="relative">
           <div className="overflow-clip rounded-2xl ">
             <Image
