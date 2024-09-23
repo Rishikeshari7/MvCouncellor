@@ -31,7 +31,7 @@ const Navbar = () => {
                 <GiHamburgerMenu />
             </button>
             {isMenuOpen && (
-                <div className="md:hidden absolute top-16 left-0 w-full bg-[#E9EFEC] flex flex-col items-center space-y-2 py-4">
+                <div className="md:hidden z-10 absolute top-16 left-0 w-full bg-[#E9EFEC] flex flex-col items-center space-y-2 py-4">
                     {navbarData.map((data) => (
                         <Link key={data.id} href={data.path} className={`w-full text-center py-2 ${pathName === data.path ? "bg-customGreen text-white" : "text-customGreen"}`}>
                             {data.name}

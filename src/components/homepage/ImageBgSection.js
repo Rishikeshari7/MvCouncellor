@@ -36,18 +36,18 @@ const ImageBgSection = () => {
           </div>
         </div>
 
-        <div className="flex w-full flex-wrap gap-8 justify-between">
+        <div className=" grid grid-cols-2 sm:flex w-full flex-wrap gap-4 justify-between">
           {counselorOptions.map((data) => (
             <div
               key={data.id}
-              className="bg-white mx-auto flex p-5 flex-col justify-between items-center rounded-2xl w-48 h-52  md:w-60 md:h-48"
+              className="bg-white mx-auto flex py-3 sm:p-5 flex-col justify-between items-center rounded-2xl w-36 h-32  sm:w-48 sm:h-52  md:w-60 md:h-48"
             >
               <div
-                className={`flex justify-center items-center ${data.bgColor} rounded-full w-24 h-24 md:w-28 md:h-28 `}
+                className={`flex justify-center items-center ${data.bgColor} rounded-full w-14 h-14 sm:w-24 sm:h-24 md:w-28 md:h-28 `}
               >
-                <span className="text-6xl text-white">{data.icon}</span>
+                <span className=" text-3xl sm:text-6xl text-white">{data.icon}</span>
               </div>
-              <p className="font-semibold text-center text-lg text-customGreen mt-4">
+              <p className="font-semibold text-center text-sm sm:text-lg text-customGreen mx-1 sm:mt-4">
                 {data.name}
               </p>
             </div>
