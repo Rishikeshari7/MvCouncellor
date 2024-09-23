@@ -1,0 +1,68 @@
+
+[
+    {
+      "id": 1,
+      "title": "Basic Plan",
+      "description": "For individuals",
+      "details": "Lorem ipsum dolor sit amet doloroli sitiol conse ctetur adipiscing elit.",
+      "price": "699",
+      "session": "1 Counselling session",
+      "included": [
+        "All analytics features",
+        "Up to 250,000 tracked visits",
+        "Normal support",
+        "Up to 3 team members"
+      ],
+      "bgClass": "bg-white",
+      "titleColor": "text-customGreen",
+      "textColor": "text-customGreenLight2",
+      "secondBG": "bg-customLightGreen4",
+      "text": "text-customAlagegreen",
+      "text2": "text-customAlagegreen2",
+      "image": "/../../public/Plan1.png"
+    },
+    {
+      "id": 2,
+      "title": "Pro Plan",
+      "description": "For startups",
+      "details": "Lorem ipsum dolor sit amet doloroli sitiol conse ctetur adipiscing elit.",
+      "price": "$199",
+      "session": "/monthly",
+      "included": [
+        "All analytics features",
+        "Up to 1,000,000 tracked visits",
+        "Premium support",
+        "Up to 10 team members"
+      ],
+      "bgClass": "bg-customGreen",
+      "titleColor": "text-white",
+      "textColor": "text-gray-200",
+      "text": "text-white",
+      "text2": "text-gray-200",
+      "secondBG": "bg-white",
+      "popular": true,
+      "image": "/../../public/Plan2.png"
+    },
+    {
+      "id": 3,
+      "title": "Enterprise Plan",
+      "description": "For big companies",
+      "details": "Lorem ipsum dolor sit amet doloroli sitiol conse ctetur adipiscing elit.",
+      "price": "$399",
+      "session": "/monthly",
+      "included": [
+        "All analytics features",
+        "Up to 5,000,000 tracked visits",
+        "Dedicated support",
+        "Up to 50 team members"
+      ],
+      "bgClass": "bg-white",
+      "titleColor": "text-customGreen",
+      "textColor": "text-customGreenLight2",
+      "secondBG": "bg-customLightgreen2",
+      "text": "text-customAlagegreen",
+      "text2": "text-customAlagegreen2",
+      "image": "/../../public/Plan3.png"
+    }
+  ]
+  
