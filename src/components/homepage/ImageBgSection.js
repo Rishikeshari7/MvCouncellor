@@ -39,11 +39,11 @@ const ImageBgSection = () => {
   const message = "Hello! I'd like to know more about your services.";
   return (
     <div className=" bg-customLightgreen pt-10 flex flex-col justify-center items-center flex-1 overflow-clip ">
-      <div className="flex flex-col justify-center items-center w-10/12 mx-auto gap-5 overflow-hidden ">
+      <div className="flex flex-col justify-center items-center w-full sm:w-10/12 mx-auto gap-5 overflow-hidden ">
         <div className="relative">
-          <div className="overflow-clip rounded-2xl ">
+          <div className="overflow-clip rounded-md sm:rounded-2xl ">
             <Image
-              className="aspect-video rounded-2xl blur-sm h-96 object-cover "
+              className="aspect-video rounded-md sm:rounded-2xl blur-sm h-[22rem] sm:h-96 object-cover "
               src={Heroimage}
               alt="Hero Background"
             />

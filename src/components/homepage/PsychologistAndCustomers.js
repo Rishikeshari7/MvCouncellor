@@ -42,7 +42,7 @@ const PsychologistAndCustomers = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default PsychologistAndCustomers
+export default PsychologistAndCustomers;
