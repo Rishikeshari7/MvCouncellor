@@ -106,12 +106,12 @@ const Footer = () => {
             {/* Split the items into two halves */}
             <div className="grid text-[0.75rem] sm:text-sm grid-cols-2 gap-4">
               <div>
-                {data.items.slice(0, Math.ceil(data.items.length / 2)).map((item, index) => (
+                {data.items.slice(0, Math.ceil(data.items.length / 3)).map((item, index) => (
                   <p key={index}>{item}</p>
                 ))}
               </div>
               <div>
-                {data.items.slice(Math.ceil(data.items.length / 2)).map((item, index) => (
+                {data.items.slice(Math.ceil(data.items.length / 3)).map((item, index) => (
                   <p key={index}>{item}</p>
                 ))}
               </div>
