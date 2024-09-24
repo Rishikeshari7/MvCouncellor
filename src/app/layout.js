@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,7 +27,8 @@ export default function RootLayout({ children }) {
       >
       <div className="flex flex-col max-w-screen overflow-hidden" >
         <div><Navbar/></div>
-        <div>{children}</div>
+        <div className="min-h-[70vh]">{children}</div>
+        <div><Footer/></div>
       </div>
         
       </body>

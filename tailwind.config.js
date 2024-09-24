@@ -18,6 +18,7 @@ module.exports = {
         customGreen2:"#21635A",
         customAlgaegreen:"#48490F",
         customAlgaegreen2:"#908E6C",
+        customWhite:"#F0F0F0",
 
       },
        screens: {
