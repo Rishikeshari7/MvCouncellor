@@ -89,8 +89,8 @@ const ImageBgSection = () => {
       </div>
       <div className="flex flex-col gap-6 sm:gap-10 justify-center w-full mt-10 sm:mt-20 py-8 sm:py-14 items-center flex-1 bg-customLightgreen2 ">
       <p className=" text-xl sm:text-4xl font-bold text-customGreen" >Your Path to Mental Wellness</p>
-      <div className=" w-10/12 flex flex-col justify-center items-center mx-auto gap-5">
-        <div className=" grid grid-cols-2 sm:flex w-full flex-wrap gap-2 sm:gap-4 items-stretch justify-between">
+      <div className=" w-11/12 sm:w-10/12 flex flex-col justify-center items-center mx-auto gap-5">
+        <div className=" grid grid-cols-2 sm:flex w-full flex-wrap gap-3 sm:gap-4 items-stretch justify-between">
           {services.map((data) => (
             <div
               key={data.id}
