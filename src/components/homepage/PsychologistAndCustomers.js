@@ -2,8 +2,8 @@ import React from 'react'
 
 const PsychologistAndCustomers = () => {
   return (
-    <div>
-      PsychologistAndCustomers
+    <div className='h-10' >
+      {/* PsychologistAndCustomers */}
     </div>
   )
 }
