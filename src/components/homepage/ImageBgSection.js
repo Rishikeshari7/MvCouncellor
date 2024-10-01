@@ -49,7 +49,7 @@ const ImageBgSection = () => {
             />
           </div>
           <div className="absolute text-white pr-5 top-10 left-10 max-w-[35rem] flex flex-col gap-4 ">
-            <p className="text-xl">
+            <p className="text-xl font-bold">
               Your mental health matters, and we're here to help you heal and
               thrive. Our compassionate support is designed to guide you through
               your struggles, whether it’s overcoming stress, managing anxiety.
