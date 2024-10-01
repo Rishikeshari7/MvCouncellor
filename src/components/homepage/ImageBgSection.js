@@ -39,10 +39,10 @@ const ImageBgSection = () => {
   const whatsappNumber = "9260960495";
   const message = "Hello! I'd like to know more about your services.";
   return (
-    <div className=" bg-customLightgreen pt-10 flex flex-col justify-center items-center flex-1 overflow-clip ">
-      <div className="flex flex-col justify-center items-center w-full sm:w-10/12 mx-auto gap-5 overflow-hidden ">
+    <div className=" bg-customLightgreen w-full flex flex-col justify-center items-center flex-1 overflow-clip ">
+      <div className="flex flex-col justify-center items-center w-full gap-7   overflow-hidden ">
         <div className="relative w-full">
-          <div className="overflow-clip rounded-md sm:rounded-2xl w-full ">
+          <div className="overflow-clip  w-full ">
             {/* <Image
               className="aspect-video rounded-md sm:rounded-2xl blur-sm h-[22rem] sm:h-96 object-cover "
               src={Heroimage}
@@ -51,11 +51,11 @@ const ImageBgSection = () => {
             <Carouseldata/>
           </div>
           <div></div>
-          <div className="absolute  text-white bg-customGreen/30  p-7 rounded-2xl top-11 left-10 max-w-[35rem] flex flex-col gap-4 ">
+          <div className="absolute  text-white bg-customGreen/30  p-7 rounded-2xl top-0 max-w-[35rem] h-[calc(100vh-70px)] flex flex-col gap-4 ">
             <p className="text-xl">
               Your mental health matters, and we're here to help you heal and
               thrive. Our compassionate support is designed to guide you through
-              your struggles, whether it’s overcoming stress, managing anxiety.
+              your struggles, whether it s overcoming stress, managing anxiety.
             </p>
             <Link
               href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(

@@ -16,7 +16,7 @@ const Navbar = () => {
     }, [pathName]);
 
     return (
-        <div className='flex justify-between items-center py-3 px-4 md:px-14 shadow-xl'>
+        <div className='flex justify-between items-center py-3 px-4 md:px-14 h-[70px] shadow-xl'>
             <div>
                 <Image src={MvcouncellorLogo} className='h-10' alt="Logo" />
             </div>

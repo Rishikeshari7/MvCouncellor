@@ -23,27 +23,25 @@ import img4 from "../../../public/Cimg4.png"
   return (
     <Carousel
       plugins={[plugin.current]}
-      className="w-full h-[400px] bg-customLightgreen"
-      onMouseEnter={plugin.current.stop}
-      onMouseLeave={plugin.current.reset}
+      className="w-full  bg-customLightgreen p-0 m-0"
     >
-      <CarouselContent >
+      <CarouselContent  >
         {images.map((e, index) => (
           <CarouselItem key={index} >
             <div className="bg-customLightgreen">
               <Card>
-                <CardContent className="flex aspect-square items-center bg-customLightgreen 
-                 justify-center p-6 w-full h-[400px] border-0">
-             <div className="relative w-full h-full rounded-lg">
-      <div className="absolute inset-0 bg-customLightgreen blur-xl opacity-10 rounded-lg z-10"></div>
+                <CardContent className="flex m-0 p-0 items-center bg-customLightgreen 
+                 justify-center   w-full h-[calc(100vh-70px)] border-0">
+             <div className="relative w-full h-full">
+      <div className="absolute inset-0 bg-customLightgreen blur-xl opacity-10  z-10"></div>
       <Image
         src={e}
         alt="Something went wrong"
-        className="w-full h-full  rounded-lg"
+        className="w-full h-full"
       />
     </div>
                 
-                </CardContent>
+          </CardContent>
               </Card>
             </div>
           </CarouselItem>
