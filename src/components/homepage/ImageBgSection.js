@@ -51,7 +51,7 @@ const ImageBgSection = () => {
             <Carouseldata/>
           </div>
           <div></div>
-          <div className="absolute  text-white bg-customGreen/30  p-7 rounded-2xl top-0 max-w-[35rem] h-[calc(100vh-70px)] flex flex-col gap-4 ">
+          <div className="absolute  text-white bg-customGreen/30  p-7 rounded-2xl top-0 max-w-[35rem] h-[calc(100vh-70px)] hidden flex-col gap-4 ">
             <p className="text-xl">
               Your mental health matters, and we're here to help you heal and
               thrive. Our compassionate support is designed to guide you through
