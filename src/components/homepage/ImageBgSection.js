@@ -70,8 +70,8 @@ const ImageBgSection = () => {
           </div>
         </div>
 
-        <div className=" grid grid-cols-2 sm:flex w-full flex-wrap gap-4 justify-between">
-          {counselorOptions.map((data) => (
+        <div className="  w-full  justify-center items-center">
+          <div className="w-10/12 mx-auto grid grid-cols-2 sm:flex flex-wrap justify-between gap-4">{counselorOptions.map((data) => (
             <div
               key={data.id}
               className="bg-white shadow-xl  mx-auto flex py-3 sm:p-5 flex-col justify-between items-center rounded-2xl w-36 h-32  sm:w-48 sm:h-52  md:w-60 md:h-48"
@@ -87,7 +87,7 @@ const ImageBgSection = () => {
                 {data.name}
               </p>
             </div>
-          ))}
+          ))}</div>
         </div>
       </div>
       <div className="flex flex-col gap-6 sm:gap-10 justify-center w-full mt-10 sm:mt-20 py-8 sm:py-14 items-center flex-1 bg-customLightgreen2 ">
