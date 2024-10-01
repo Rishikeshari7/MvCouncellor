@@ -7,6 +7,7 @@ import { BsWhatsapp } from "react-icons/bs";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import Link from "next/link";
 import { services } from "@/data/services";
+import Carouseldata from "../carousel/Carouseldata";
 
 const ImageBgSection = () => {
   const counselorOptions = [
@@ -40,16 +41,18 @@ const ImageBgSection = () => {
   return (
     <div className=" bg-customLightgreen pt-10 flex flex-col justify-center items-center flex-1 overflow-clip ">
       <div className="flex flex-col justify-center items-center w-full sm:w-10/12 mx-auto gap-5 overflow-hidden ">
-        <div className="relative">
-          <div className="overflow-clip rounded-md sm:rounded-2xl ">
-            <Image
+        <div className="relative w-full">
+          <div className="overflow-clip rounded-md sm:rounded-2xl w-full ">
+            {/* <Image
               className="aspect-video rounded-md sm:rounded-2xl blur-sm h-[22rem] sm:h-96 object-cover "
               src={Heroimage}
               alt="Hero Background"
-            />
+            /> */}
+            <Carouseldata/>
           </div>
-          <div className="absolute text-white pr-5 top-10 left-10 max-w-[35rem] flex flex-col gap-4 ">
-            <p className="text-xl font-bold">
+          <div></div>
+          <div className="absolute  text-white bg-customGreen/30  p-7 rounded-2xl top-11 left-10 max-w-[35rem] flex flex-col gap-4 ">
+            <p className="text-xl">
               Your mental health matters, and we're here to help you heal and
               thrive. Our compassionate support is designed to guide you through
               your struggles, whether it’s overcoming stress, managing anxiety.
