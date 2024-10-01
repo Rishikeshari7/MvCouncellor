@@ -1,4 +1,4 @@
-import { FaUserTie, FaChalkboardTeacher, FaLaptopCode, FaStethoscope } from 'react-icons/fa';
+import { FaUserTie, FaChalkboardTeacher, FaLaptopCode, FaStethoscope, FaPaintBrush, FaGavel, FaClipboardList, FaHeadphones, FaPenNib, FaCamera, FaMusic, FaApple, FaBuilding, FaPlane, FaHeartbeat } from 'react-icons/fa';
 
 export const customerReviews = [
   {
@@ -28,5 +28,82 @@ export const customerReviews = [
     occupation: "Medical Professional",
     comment: "I found their services to be highly effective in dealing with personal and professional issues.",
     icon: <FaStethoscope />,
+  },
+  {
+    id: 5,
+    name: "Rachel Green",
+    occupation: "Artist",
+    comment: "As a creative, it's easy to get overwhelmed. Their counseling gave me clarity and helped me rediscover my passion.",
+    icon: <FaPaintBrush />,
+  },
+  {
+    id: 6,
+    name: "David White",
+    occupation: "Lawyer",
+    comment: "Their stress-relief techniques were life-changing and have significantly improved my focus at work.",
+    icon: <FaGavel />,
+  },
+  {
+    id: 7,
+    name: "Linda Black",
+    occupation: "Project Manager",
+    comment: "Their time management and stress coping strategies really helped me juggle multiple projects effectively.",
+    icon: <FaClipboardList />,
+  },
+  {
+    id: 8,
+    name: "Mark Brown",
+    occupation: "Customer Support Specialist",
+    comment: "Their communication skills workshop helped me handle difficult customers better, improving my job performance.",
+    icon: <FaHeadphones />,
+  },
+  {
+    id: 9,
+    name: "Anna Clark",
+    occupation: "Writer",
+    comment: "The sessions gave me the mental clarity to overcome writer’s block and improve my focus on storytelling.",
+    icon: <FaPenNib />,
+  },
+  {
+    id: 10,
+    name: "James Adams",
+    occupation: "Photographer",
+    comment: "The creative burnout program helped me rekindle my passion for photography and rediscover my creativity.",
+    icon: <FaCamera />,
+  },
+  {
+    id: 11,
+    name: "Natalie Green",
+    occupation: "Musician",
+    comment: "I learned techniques to manage performance anxiety, which has significantly improved my confidence on stage.",
+    icon: <FaMusic />,
+  },
+  {
+    id: 12,
+    name: "Steve Jobs",
+    occupation: "Tech Entrepreneur",
+    comment: "The guidance I received on work-life balance was invaluable and has made me more productive and focused.",
+    icon: <FaApple />,
+  },
+  {
+    id: 13,
+    name: "William Moore",
+    occupation: "Architect",
+    comment: "Their stress management tools helped me deal with the high demands of working in a fast-paced architectural firm.",
+    icon: <FaBuilding />,
+  },
+  {
+    id: 14,
+    name: "Oliver Scott",
+    occupation: "Airline Pilot",
+    comment: "Managing long hours and stressful situations has become easier with the coping strategies I learned from them.",
+    icon: <FaPlane />,
+  },
+  {
+    id: 15,
+    name: "Dr. Jessica Parker",
+    occupation: "Cardiologist",
+    comment: "The burnout prevention sessions helped me balance my demanding work schedule while keeping my mental health intact.",
+    icon: <FaHeartbeat />,
   }
 ];

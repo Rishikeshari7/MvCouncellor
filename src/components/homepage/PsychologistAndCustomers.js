@@ -4,11 +4,11 @@ import { customerReviews } from '@/data/review'
 const PsychologistAndCustomers = () => {
   return (
     <div className='flex flex-col justify-center items-center flex-1 overflow-hidden'>
-      <div className="flex flex-col gap-6 sm:gap-10 justify-center w-full py-8 sm:py-14 items-center flex-1 bg-white">
+      <div className="flex flex-col gap-6 sm:gap-10 justify-center w-full py-6 sm:py-12 items-center flex-1 bg-white">
         <p className="text-xl sm:text-4xl font-bold text-customGreen">Our Happy Customer</p>
         <div className="w-11/12 sm:w-10/12 flex flex-col justify-center items-center mx-auto gap-5">
           {/* Add inner shadow and padding */}
-          <div className="marquee-container w-full p-6 ">
+          <div className="marquee-container w-full p-4 ">
             <div className="marquee-content grid grid-cols-2  sm:flex w-full  gap-4 items-stretch justify-between">
             {customerReviews.map((data) => (
   <div

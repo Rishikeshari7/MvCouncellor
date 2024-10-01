@@ -34,7 +34,7 @@ body {
 
 .marquee-content {
   display: flex;
-  animation: marquee 15s linear infinite;
+  animation: marquee 18s linear infinite;
 }
 
 .marquee-container::before, 
