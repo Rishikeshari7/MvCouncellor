@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Page = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    description: '',
+    state: '',
+  });
+
   const statesOfIndia = [
     'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh',
     'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka',
@@ -9,6 +17,44 @@ const Page = () => {
     'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 
     'West Bengal'
   ];
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('/api/send-mail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert('Mail sent successfully!');
+        // Reset the form if needed
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          description: '',
+          state: '',
+        });
+      } else {
+        alert('Failed to send mail. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error sending mail:', error);
+      alert('Error occurred. Please try again.');
+    }
+  };
 
   return (
     <div className='bg-customLightgreen2 flex flex-col w-full justify-center items-center py-10'>
@@ -42,7 +88,7 @@ const Page = () => {
         </div>
 
         {/* Form Section */}
-        <form className='w-full p-6 bg-customLightgreen2 rounded-md border-[3px] border-customGreen2 shadow-customLightgreen4 shadow-xl'>
+        <form onSubmit={handleSubmit} className='w-full p-6 bg-customLightgreen2 rounded-md border-[3px] border-customGreen2 shadow-customLightgreen4 shadow-xl'>
           {/* Grid Layout: 2 columns above md, 1 column below */}
           <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
             {/* Name Field */}
@@ -52,8 +98,11 @@ const Page = () => {
                 type='text'
                 id='name'
                 name='name'
+                value={formData.name}
+                onChange={handleChange}
                 className='p-2 border-2 bg-white/30 border-customLightgreen rounded-md focus:outline-none focus:border-customLightgreen3'
                 placeholder='Enter your name'
+                required
               />
             </div>
             {/* Email Field */}
@@ -63,8 +112,11 @@ const Page = () => {
                 type='email'
                 id='email'
                 name='email'
+                value={formData.email}
+                onChange={handleChange}
                 className='p-2 border-2 bg-white/30 border-customLightgreen rounded-md focus:outline-none focus:border-customLightgreen3'
                 placeholder='Enter your email'
+                required
               />
             </div>
             {/* Phone Number Field */}
@@ -74,8 +126,11 @@ const Page = () => {
                 type='tel'
                 id='phone'
                 name='phone'
+                value={formData.phone}
+                onChange={handleChange}
                 className='p-2 border-2 bg-white/30 border-customLightgreen rounded-md focus:outline-none focus:border-customLightgreen3'
                 placeholder='Enter your phone number'
+                required
               />
             </div>
             {/* State Dropdown */}
@@ -84,7 +139,10 @@ const Page = () => {
               <select
                 id='state'
                 name='state'
+                value={formData.state}
+                onChange={handleChange}
                 className='p-2 border-2 bg-white/30 border-customLightgreen rounded-md focus:outline-none focus:border-customLightgreen3'
+                required
               >
                 <option value=''>Select your state</option>
                 {statesOfIndia.map((state) => (
@@ -101,9 +159,12 @@ const Page = () => {
             <textarea
               id='description'
               name='description'
+              value={formData.description}
+              onChange={handleChange}
               className='w-full p-2 border-2 bg-white/30 border-customLightgreen rounded-md focus:outline-none focus:border-customLightgreen3'
               placeholder='Enter a description'
               rows='4'
+              required
             />
           </div>
           {/* Submit Button */}

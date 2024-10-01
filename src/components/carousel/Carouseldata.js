@@ -31,7 +31,7 @@ import img4 from "../../../public/Cimg4.png"
             <div className="bg-customLightgreen">
               <Card>
                 <CardContent className="flex m-0 p-0 items-center bg-customLightgreen 
-                 justify-center   w-full h-[calc(100vh-70px)] border-0">
+                 justify-center w-full h-[calc(100vh-75px)] sm:h-[calc(100vh-70px)] border-0">
              <div className="relative w-full h-full">
       <div className="absolute inset-0 bg-customLightgreen blur-xl opacity-10  z-10"></div>
       <Image
