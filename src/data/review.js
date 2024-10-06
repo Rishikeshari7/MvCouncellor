@@ -1,109 +1,142 @@
-import { FaUserTie, FaChalkboardTeacher, FaLaptopCode, FaStethoscope, FaPaintBrush, FaGavel, FaClipboardList, FaHeadphones, FaPenNib, FaCamera, FaMusic, FaApple, FaBuilding, FaPlane, FaHeartbeat } from 'react-icons/fa';
-
 export const customerReviews = [
   {
     id: 1,
     name: "John Doe",
     occupation: "Software Engineer",
     comment: "The counseling service helped me manage my work stress and improved my overall mental well-being.",
-    icon: <FaLaptopCode />,
+    image: "https://plus.unsplash.com/premium_photo-1683121366070-5ceb7e007a97?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFsZSUyMGhlYWRzaG90fGVufDB8fDB8fHww", // Replace with actual path
   },
   {
     id: 2,
-    name: "Emily Smith",
-    occupation: "Teacher",
+    name: "Rishi Keshari",
+    occupation: "Student",
     comment: "Their stress management program taught me how to handle the pressures of my job and maintain balance in my life.",
-    icon: <FaChalkboardTeacher />,
+    image: "https://res.cloudinary.com/dujly8wyv/image/upload/v1728158003/Screenshot_2024-08-14_232720_jpkadd.png", // Replace with actual path
   },
   {
     id: 3,
     name: "Michael Johnson",
     occupation: "Business Executive",
     comment: "The anger management sessions were incredibly insightful and have greatly improved my relationships at work and home.",
-    icon: <FaUserTie />,
+    image: "https://media.npr.org/assets/img/2023/01/13/sangita_ashok_devde_5_toned-2_custom-a031d6e81af609298bf768be5477f0d1ee12b9c2.jpg", // Replace with actual path
   },
   {
     id: 4,
     name: "Dr. Sarah Brown",
     occupation: "Medical Professional",
     comment: "I found their services to be highly effective in dealing with personal and professional issues.",
-    icon: <FaStethoscope />,
+    image: "https://static.vecteezy.com/system/resources/thumbnails/005/346/410/small_2x/close-up-portrait-of-smiling-handsome-young-caucasian-man-face-looking-at-camera-on-isolated-light-gray-studio-background-photo.jpg", // Replace with actual path
   },
   {
     id: 5,
     name: "Rachel Green",
     occupation: "Artist",
     comment: "As a creative, it's easy to get overwhelmed. Their counseling gave me clarity and helped me rediscover my passion.",
-    icon: <FaPaintBrush />,
+    image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", // Replace with actual path
   },
   {
     id: 6,
-    name: "David White",
+    name: "Rishi Keshari",
     occupation: "Lawyer",
     comment: "Their stress-relief techniques were life-changing and have significantly improved my focus at work.",
-    icon: <FaGavel />,
-  },
+   image: "https://res.cloudinary.com/dujly8wyv/image/upload/v1728158003/Screenshot_2024-08-14_232720_jpkadd.png", // Replace with actual path
+ },
   {
     id: 7,
     name: "Linda Black",
     occupation: "Project Manager",
     comment: "Their time management and stress coping strategies really helped me juggle multiple projects effectively.",
-    icon: <FaClipboardList />,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSB6mR1_wKbf94U1nQTugQceyfGI6Kjay3pw&s", // Replace with actual path
   },
   {
     id: 8,
     name: "Mark Brown",
     occupation: "Customer Support Specialist",
     comment: "Their communication skills workshop helped me handle difficult customers better, improving my job performance.",
-    icon: <FaHeadphones />,
+    image: "data:image/jpeg;base64,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", // Replace with actual path
   },
   {
     id: 9,
     name: "Anna Clark",
     occupation: "Writer",
     comment: "The sessions gave me the mental clarity to overcome writer’s block and improve my focus on storytelling.",
-    icon: <FaPenNib />,
+    image: "https://miro.medium.com/v2/resize:fit:400/0*lBGoJMPQ2eIClUg-.jpg", // Replace with actual path
   },
   {
     id: 10,
     name: "James Adams",
     occupation: "Photographer",
     comment: "The creative burnout program helped me rekindle my passion for photography and rediscover my creativity.",
-    icon: <FaCamera />,
+    image: "data:image/jpeg;base64,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", // Replace with actual path
   },
   {
     id: 11,
     name: "Natalie Green",
     occupation: "Musician",
     comment: "I learned techniques to manage performance anxiety, which has significantly improved my confidence on stage.",
-    icon: <FaMusic />,
+    image: "https://res.cloudinary.com/dujly8wyv/image/upload/v1728158003/Screenshot_2024-08-14_232720_jpkadd.png", // Replace with actual path
   },
   {
     id: 12,
     name: "Steve Jobs",
     occupation: "Tech Entrepreneur",
     comment: "The guidance I received on work-life balance was invaluable and has made me more productive and focused.",
-    icon: <FaApple />,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgs05i5VpZMTPOiIncX2XRWxQsaQ0UBdpUdA&s", // Replace with actual path
   },
-  {
-    id: 13,
-    name: "William Moore",
-    occupation: "Architect",
-    comment: "Their stress management tools helped me deal with the high demands of working in a fast-paced architectural firm.",
-    icon: <FaBuilding />,
-  },
-  {
-    id: 14,
-    name: "Oliver Scott",
-    occupation: "Airline Pilot",
-    comment: "Managing long hours and stressful situations has become easier with the coping strategies I learned from them.",
-    icon: <FaPlane />,
-  },
-  {
-    id: 15,
-    name: "Dr. Jessica Parker",
-    occupation: "Cardiologist",
-    comment: "The burnout prevention sessions helped me balance my demanding work schedule while keeping my mental health intact.",
-    icon: <FaHeartbeat />,
-  }
+  // {
+  //   id: 13,
+  //   name: "William Moore",
+  //   occupation: "Architect",
+  //   comment: "Their stress management tools helped me deal with the high demands of working in a fast-paced architectural firm.",
+  //   image: "https://media.istockphoto.com/id/1049317672/photo/indian-girl-with-phone.jpg?s=612x612&w=0&k=20&c=xeGKfLlBeHPM32f94-i7pKyH92aZvx96KnHI0qgGUMA=", // Replace with actual path
+  // },
+  // {
+  //   id: 14,
+  //   name: "Oliver Scott",
+  //   occupation: "Airline Pilot",
+  //   comment: "Managing long hours and stressful situations has become easier with the coping strategies I learned from them.",
+  //   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTneqGKOUivkv-OJ3NZA-W-WoByHyR2JXaFkA&s", // Replace with actual path
+  // },
+  // {
+  //   id: 15,
+  //   name: "Dr. Jessica Parker",
+  //   occupation: "Cardiologist",
+  //   comment: "The burnout prevention sessions helped me balance my demanding work schedule while keeping my mental health intact.",
+  //   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTneqGKOUivkv-OJ3NZA-W-WoByHyR2JXaFkA&s", // Replace with actual path
+  // },
+  // {
+  //   id: 16,
+  //   name: "Daniel Thompson",
+  //   occupation: "Data Analyst",
+  //   comment: "Their analytical approach to stress management has been truly effective for my work-life balance.",
+  //   image: "https://media.istockphoto.com/id/1331257339/photo/portrait-of-happy-mature-man-wearing-spectacles-and-looking-at-camera-indoor.jpg?s=612x612&w=0&k=20&c=AfOWDoeyYr6cRjFr_EOCpp7ReplE0WFi2wDLhMVyxtU=", // Replace with actual path
+  // },
+  // {
+  //   id: 17,
+  //   name: "Sophia Wilson",
+  //   occupation: "Marketing Specialist",
+  //   comment: "The techniques I learned for managing work-related stress have significantly boosted my productivity.",
+  //   image: "data:image/jpeg;base64,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", // Replace with actual path
+  // },
+  // {
+  //   id: 18,
+  //   name: "Ethan Harris",
+  //   occupation: "Fitness Trainer",
+  //   comment: "The mental resilience strategies I acquired helped me better support my clients during tough workouts.",
+  //   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSB6mR1_wKbf94U1nQTugQceyfGI6Kjay3pw&s", // Replace with actual path
+  // },
+  // {
+  //   id: 19,
+  //   name: "Isabella Lewis",
+  //   occupation: "Chef",
+  //   comment: "The stress relief techniques I learned were invaluable during my busiest shifts in the kitchen.",
+  //   image: "/path/to/isabella_lewis.jpg", // Replace with actual path
+  // },
+  // {
+  //   id: 20,
+  //   name: "Liam Rodriguez",
+  //   occupation: "Sales Manager",
+  //   comment: "The focus on emotional intelligence has transformed my approach to customer interactions.",
+  //   image: "/path/to/liam_rodriguez.jpg", // Replace with actual path
+  // },
 ];

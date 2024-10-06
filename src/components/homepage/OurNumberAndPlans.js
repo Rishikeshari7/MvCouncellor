@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import { ourNumbers } from "@/data/SubscriptionData";
 import Image from "next/image";
@@ -28,9 +28,9 @@ const OurNumberAndPlans = () => {
         "Up to 3 team members",
       ],
       bgClass: "bg-white",
-      titleColor: "text-customGreen",
-      textColor: "text-customGreenLight2",
-      secondBG: "bg-customLightgreen4",
+      titleColor: "text-customYellowtext2",
+      textColor: "text-customYellowtext1",
+      secondBG: "bg-yellow-200",
       text1: "text-customAlgaegreen",
       text2: "text-customAlagegreen2",
       image: Plan1,
@@ -51,16 +51,16 @@ const OurNumberAndPlans = () => {
         "Premium support",
         "Up to 10 team members",
       ],
-      bgClass: "bg-customGreen",
+      bgClass: "bg-custom-gradient",
       titleColor: "text-[#fff]",
-      textColor: "text-gray-500",
+      textColor: "text-gray-200",
       text1: "text-white",
       text2: "text-gray-400",
       secondBG: "bg-white",
       popular: true,
       image: Plan2,
       btnBg: "bg-white",
-      btnText: "text-customGreen",
+      btnText: "text-custom-gradient",
     },
     {
       id: 3,
@@ -77,13 +77,13 @@ const OurNumberAndPlans = () => {
         "Up to 50 team members",
       ],
       bgClass: "bg-white",
-      titleColor: "text-customGreen",
-      textColor: "text-customGreenLight2",
-      secondBG: "bg-customLightgreen2",
+      titleColor: "text-customYellowtext2",
+      textColor: "text-customYellowtext1",
+      secondBG: "bg-custom-gradient2  ",
       text1: "text-customAlgaegreen",
       text2: "text-customAlagegreen2",
       image: Plan3,
-      btnBg: "bg-customGreen",
+      btnBg: "bg-custom-gradient",
       btnText: "text-white",
     },
   ];
@@ -94,10 +94,10 @@ const OurNumberAndPlans = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col text-black/80 justify-center items-center ">
       {/* Our Number */}
-      <div className="flex w-full justify-center items-center bg-customLightgreen2">
-        <div className="flex flex-col md:flex-row w-10/12 my-5 sm:my-10 md:my-16 justify-between gap-3 sm:gap-5 items-center text-customGreen">
+      <div className="flex w-full justify-center items-center bg-yellow-50 border border-yellow-300">
+        <div className="flex flex-col md:flex-row w-10/12 my-5 sm:my-10 md:my-16 justify-between gap-3 sm:gap-5 items-center">
           {ourNumbers.map((data) => (
             <div
               key={data.id}
@@ -134,7 +134,7 @@ const OurNumberAndPlans = () => {
                 <div className="flex gap-2">
                   <div
                     className={`${
-                      data.id === 1 ? "bg-customLightgreen4" : styles.secondBG
+                      data.id === 1 ? "bg-custom-gradient3" : styles.secondBG
                     } flex justify-center items-center p-2 sm:p-4 rounded-2xl`}
                   >
                     <Image
@@ -155,12 +155,12 @@ const OurNumberAndPlans = () => {
                       </p>
                     </div>
                     {data.popular && (
-                        <button
-                      className={`  bg-[#FFD700] text-[#3C3C3C]
+                      <button
+                        className={`  bg-[#FFD700] text-[#3C3C3C]
                       w-fit py-1 px-3 rounded-lg text-sm font-semibold shadow-md`}
-                    >
-                      Popular
-                    </button>
+                      >
+                        Popular
+                      </button>
                     )}
                   </div>
                 </div>
@@ -195,10 +195,13 @@ const OurNumberAndPlans = () => {
 
                 {/* Section 4 */}
                 <button
-                  className={`flex justify-center items-center py-3 rounded-full mt-3 sm:mt-5 font-bold ${styles.btnText} ${styles.btnBg}`}
-                >
-                  Get started
-                </button>
+  className={`flex justify-center items-center py-3 rounded-full mt-3 sm:mt-5 font-bold ${styles.btnBg}`}
+>
+  <span className={isSelected ? "bg-clip-text text-transparent bg-custom-gradient" : "text-white"}>
+    Get started
+  </span>
+</button>
+
               </div>
             );
           })}

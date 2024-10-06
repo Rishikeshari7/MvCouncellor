@@ -8,6 +8,7 @@ import { MdOutlinePhoneInTalk } from "react-icons/md";
 import Link from "next/link";
 import { services } from "@/data/services";
 import Carouseldata from "../carousel/Carouseldata";
+import ImageCarousel from "../carousel/ImageCarousel";
 
 const ImageBgSection = () => {
   const counselorOptions = [
@@ -39,15 +40,10 @@ const ImageBgSection = () => {
   const whatsappNumber = "9260960495";
   const message = "Hello! I'd like to know more about your services.";
   return (
-    <div className=" bg-customLightgreen w-full flex flex-col justify-center items-center flex-1 overflow-clip ">
-      <div className="flex flex-col justify-center items-center w-full gap-7   overflow-hidden ">
-        <div className="relative w-full">
+    <div className=" bg-custom-gradient w-full flex flex-col justify-center items-center flex-1 overflow-clip ">
+      <div className="flex flex-col justify-center items-center w-full overflow-hidden ">
+        {/* <div className="relative w-full">
           <div className="overflow-clip  w-full ">
-            {/* <Image
-              className="aspect-video rounded-md sm:rounded-2xl blur-sm h-[22rem] sm:h-96 object-cover "
-              src={Heroimage}
-              alt="Hero Background"
-            /> */}
             <Carouseldata/>
           </div>
           <div></div>
@@ -68,9 +64,11 @@ const ImageBgSection = () => {
               </button>
             </Link>
           </div>
-        </div>
-
-        <div className="  w-full  justify-center items-center">
+        </div> */}
+          <div className="z-10 w-11/12 sm:w-10/12 ">
+            <ImageCarousel/>
+          </div>
+        <div className=" z-20 mt-[-4rem] xl:mt-[-5rem] w-full justify-center items-center">
           <div className="w-10/12 mx-auto grid grid-cols-2 sm:flex flex-wrap justify-between gap-4">{counselorOptions.map((data) => (
             <div
               key={data.id}
@@ -90,8 +88,8 @@ const ImageBgSection = () => {
           ))}</div>
         </div>
       </div>
-      <div className="flex flex-col gap-6 sm:gap-10 justify-center w-full mt-10 sm:mt-20 py-8 sm:py-14 items-center flex-1 bg-customLightgreen2 ">
-      <p className=" text-xl sm:text-4xl font-bold text-customGreen" >Your Path to Mental Wellness</p>
+      <div className="flex flex-col text-black/80 gap-6 sm:gap-10 justify-center w-full mt-10 sm:mt-20 py-8 sm:py-14 items-center flex-1 bg-yellow-50 border-2 border-yellow-200 ">
+      <p className=" text-xl sm:text-3xl md:text-5xl font-bold " >Your Path to Mental Wellness</p>
       <div className=" w-11/12 sm:w-10/12 flex flex-col justify-center items-center mx-auto gap-5">
         <div className=" grid grid-cols-2 sm:flex w-full flex-wrap gap-4 items-stretch justify-between">
           {services.map((data) => (
@@ -100,16 +98,16 @@ const ImageBgSection = () => {
               className="bg-white gap-1 shadow-md sm:shadow-2xl mx-auto flex py-3 sm:p-5 flex-col justify-between items-center rounded-2xl w-[9.5rem] h-52  sm:w-64 sm:h-80  md:w-64 md:h-80"
             >
               <div
-                className={`flex justify-center items-center p-5 sm:p-10 bg-customGreen rounded-full w-14 h-14 sm:w-24 sm:h-24 md:w-28 md:h-28 `}
+                className={`flex justify-center items-center p-5 sm:p-10 bg-custom-gradient rounded-full w-14 h-14 sm:w-24 sm:h-24 md:w-28 md:h-28 `}
               >
                 <span className=" text-3xl sm:text-6xl   text-white">
                   {data.icon}
                 </span>
               </div>
-              <p className="font-bold text-center text-sm sm:text-xl text-customGreen mx-1 sm:mt-4">
+              <p className="font-bold text-center text-sm sm:text-xl  mx-1 sm:mt-4">
                 {data.title}
               </p>
-              <p className="font-medium text-center text-sm sm:text-lg text-customGreen2 mx-[6px] sm:mt-4">
+              <p className="font-medium text-center text-sm sm:text-lg text-customGreen mx-[6px] sm:mt-4">
                 {data.description}
               </p>
             </div>

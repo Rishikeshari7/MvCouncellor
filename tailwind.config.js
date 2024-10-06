@@ -20,6 +20,11 @@ module.exports = {
   			customAlgaegreen: '#48490F',
   			customAlgaegreen2: '#908E6C',
   			customWhite: '#F0F0F0',
+
+			customLightyellow:"#f4f1c4",
+			customYellowtext1:"#908E6C",
+			customYellowtext2:"#48490F",
+
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
@@ -67,7 +72,14 @@ module.exports = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		  backgroundImage: {
+			'custom-gradient': 'linear-gradient(180deg, #FEFDA4 0%, #B39138 32%, #FEF99D 100%)',
+			'custom-gradient2': 'linear-gradient(180deg, #FEFDA4 15%, #B39138 80%, #FEF99D 99%)',
+	'custom-gradient3': 'linear-gradient(150deg, #FFF3A2 15%, #C7A84E 80%, #FEFEE0 99%)',
+
+
+		  },
   	}
   },
   plugins: [require("tailwindcss-animate")],
