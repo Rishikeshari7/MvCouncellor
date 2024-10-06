@@ -23,7 +23,7 @@ import img4 from "../../../public/Cimg4.png"
   return (
     <Carousel
       plugins={[plugin.current]}
-      className="w-full  bg-customLightgreen p-0 m-0"
+      className="w-[5rem]  bg-customLightgreen p-0 m-0"
     >
       <CarouselContent  >
         {images.map((e, index) => (

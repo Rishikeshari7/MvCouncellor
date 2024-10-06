@@ -54,7 +54,7 @@ const Footer = () => {
     }
 ];
   return (
-    <div className="bg-customGreen text-white flex justify-center items-center ">
+    <div className="bg-amber-300/40 text-customYellowtext2 flex justify-center items-center ">
       <div className="flex w-10/12 flex-col gap-3 sm:gap-5 my-5 sm:my-10 ">
         {/* 1 */}
         <div className="flex flex-col md:flex-row  justify-between items-start md:items-center gap-3">
@@ -65,7 +65,7 @@ const Footer = () => {
                 key={data.id}
                 className="flex items-start justify-center gap-2"
               >
-                <div className=" text-2xl sm:text-4xl text-customLightgreen">
+                <div className=" text-2xl sm:text-4xl text-yellow-600">
                   {data.icons}
                 </div>
                 <div className="flex text-[0.8rem] sm:text-sm flex-col items-start justify-center">
@@ -76,9 +76,9 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="flex flex-1 border-t border-white/30 rounded-full"></div>
+        <div className="flex flex-1 border-t border-black/30 rounded-full"></div>
         {/* 2 */}
-        <div className="flex text-customWhite justify-between gap-8 items-start my-2 pr-10 sm:pr-20">
+        <div className="flex justify-between gap-8 items-start my-2 pr-10 sm:pr-20">
           <div className="flex  flex-col items-start justify-between gap-3">
             <p className="max-w-72 text-[0.75rem] sm:text-sm ">
               Ewebot have much planned for the future, working with great
@@ -120,7 +120,7 @@ const Footer = () => {
         </div>
       ))}
         </div>
-        <div className="flex flex-1 border-t border-white/30 rounded-full"></div>
+        <div className="flex flex-1 border-t border-black/30 rounded-full"></div>
         <p className="text-sm" >© 2023 — All Rights Reserved.</p>
       </div>
     </div>

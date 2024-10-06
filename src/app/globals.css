@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
+* {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
@@ -23,23 +23,20 @@ body {
   margin-right: 16px; /* Space between cards */
 }
 
-
 .marquee-container {
   overflow: hidden;
   position: relative;
-  width: 100%;  
+  width: 100%;
 }
-
-
 
 .marquee-content {
   display: flex;
-  animation: marquee 18s linear infinite;
+  animation: marquee 22s linear infinite;
 }
 
-.marquee-container::before, 
+.marquee-container::before,
 .marquee-container::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -50,24 +47,31 @@ body {
 
 .marquee-container::before {
   left: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
 }
+
 
 .marquee-container::after {
   right: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
 }
-
 
 @keyframes marquee {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   100% {
     transform: translateX(-100%);
   }
 }
-
 
 @layer base {
   :root {
@@ -125,7 +129,6 @@ body {
   }
 }
 
-
 @layer base {
   * {
     @apply border-border;
@@ -135,3 +138,73 @@ body {
   }
 }
 
+/* #google_translate_element select {
+  background-color: #f1f1f1;
+  color: #333;
+  border-radius: 5px;
+  padding: 5px;
+}
+#targetLanguage {
+  display: none;
+} */
+/* */
+/*  
+
+
+
+.goog-te-gadget-icon {
+  display: flex;
+}
+.goog-te-gadget-simple {
+  padding: 0%;
+}
+ */
+ .VIpgJd-ZVi9od-xl07Ob-lTBxed{
+  
+  
+  color:black;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  display: none;
+  
+ }
+ .VIpgJd-ZVi9od-xl07Ob-lTBxed a
+ {
+  margin: 0px;
+  padding: 0px;
+ 
+  }
+ .skiptranslate {
+  
+}
+ .goog-te-gadget-icon{
+  display: none;
+ }
+ .goog-te-gadget {
+ 
+
+}
+#google_translate_element {
+  
+}
+.goog-te-gadget-simple {
+  
+  background:transparent !important;
+  
+
+}
+[id=":0.targetLanguage"]  {
+  /* Add your desired styles here */
+  background-color: transparent !important;/* Example */
+  height: 25px !important;
+  width: 45px !important;
+}
+[id=":0.targetLanguage"]::before  {
+content:'Lang ↓';
+color: black;
+
+}
+table {
+  display: none !important;
+}
