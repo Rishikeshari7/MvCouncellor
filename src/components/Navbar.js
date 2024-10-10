@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
-import MvcouncellorLogo from "../../public/MvcouncellorLogo.png"
+import Logo from "../../public/Logo.jpg"
 import { navbarData } from "@/data/navbarData"
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -18,7 +18,7 @@ const Navbar = () => {
     return (
         <div className='flex text-black justify-between items-center py-3 px-4 md:px-14 h-[70px] shadow-xl'>
             <div>
-                <Image src={MvcouncellorLogo} className='h-10' alt="Logo" />
+                <Image src={Logo} className='h-16 w-[7.5rem]' alt="Logo" />
             </div>
             <div className="flex ">
             <div className='hidden md:flex rounded-full mr-6 bg-[#faf9ac59]'>
