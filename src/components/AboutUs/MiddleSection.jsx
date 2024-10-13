@@ -2,7 +2,7 @@ import React from 'react'
 import TimeLineQuality from './TimeLineQuality'
 import BlueText from '../ui/BlueText'
 import Image from 'next/image'
-import TimeLineImage from '../../../public/TimeLineLogo/TimeLineImage.png'
+import TimeLineImage from '../../../public/TimeLineLogo/TimelineImage.png'
 const MiddleSection = () => {
   return (
     <div className="flex bg-gray-100 justify-center items-center">
