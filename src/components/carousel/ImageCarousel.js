@@ -26,7 +26,7 @@ const ImageCarousel = () => {
      {
         images.map((e,index)=>{
             return (
-        <Image
+        <Image key={index}
         src={e}
         alt="carousel"
         
