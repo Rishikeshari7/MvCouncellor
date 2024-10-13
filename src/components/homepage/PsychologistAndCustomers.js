@@ -10,7 +10,7 @@ const PsychologistAndCustomers = () => {
           <div className="marquee-container  w-full p-4 ">
             <div className="marquee-content flex w-full gap-4 items-stretch justify-between">
               {/* Duplicate the reviews for seamless scrolling */}
-              {[...customerReviews, ...customerReviews].map((data) => (
+              {customerReviews.map((data) => (
                 <div
                   key={data.id}
                   className="bg-yellow-100 shadow-md sm:shadow-md sm:shadow-yellow-200 mx-auto flex py-3 overflow-hidden sm:p-5 flex-col items-center rounded-2xl min-w-[18rem] max-h-[14rem] sm:min-w-64 sm:max-h-80 md:min-w-64 md:max-h-80"

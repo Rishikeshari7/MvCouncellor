@@ -137,28 +137,6 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
-/* #google_translate_element select {
-  background-color: #f1f1f1;
-  color: #333;
-  border-radius: 5px;
-  padding: 5px;
-}
-#targetLanguage {
-  display: none;
-} */
-/* */
-/*  
-
-
-
-.goog-te-gadget-icon {
-  display: flex;
-}
-.goog-te-gadget-simple {
-  padding: 0%;
-}
- */
  .VIpgJd-ZVi9od-xl07Ob-lTBxed{
   
   
@@ -175,19 +153,10 @@ body {
   padding: 0px;
  
   }
- .skiptranslate {
-  
-}
+
  .goog-te-gadget-icon{
   display: none;
  }
- .goog-te-gadget {
- 
-
-}
-#google_translate_element {
-  
-}
 .goog-te-gadget-simple {
   
   background:transparent !important;
@@ -207,4 +176,31 @@ color: black;
 }
 table {
   display: none !important;
+}
+
+
+.custom-gradient {
+  background: linear-gradient(
+    118.19deg,
+    #1290eb -3.62%,
+    #ad30c6 50.44%,
+    #12f06e 104.51%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+.custom-gradient-orange {
+  background: -webkit-linear-gradient(#de6d0b, #d3c71a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+.custom-gradient-yellow {
+  background: -webkit-linear-gradient(#efd12a, #d3c71a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
 }

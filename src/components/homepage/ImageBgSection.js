@@ -1,13 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import Heroimage from "../../../public/Heroimage.jpg";
-// import { counselorOptions } from "@/data/counselorOptions";
 import { FaClipboardCheck, FaCalendarAlt } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import Link from "next/link";
 import { services } from "@/data/services";
-import Carouseldata from "../carousel/Carouseldata";
+
 import ImageCarousel from "../carousel/ImageCarousel";
 
 const ImageBgSection = () => {
@@ -42,29 +40,6 @@ const ImageBgSection = () => {
   return (
     <div className=" bg-custom-gradient w-full flex flex-col justify-center items-center flex-1 overflow-clip ">
       <div className="flex flex-col justify-center items-center w-full overflow-hidden ">
-        {/* <div className="relative w-full">
-          <div className="overflow-clip  w-full ">
-            <Carouseldata/>
-          </div>
-          <div></div>
-          <div className="absolute  text-white bg-customGreen/30  p-7 rounded-2xl top-0 max-w-[35rem] h-[calc(100vh-70px)] hidden flex-col gap-4 ">
-            <p className="text-xl">
-              Your mental health matters, and we're here to help you heal and
-              thrive. Our compassionate support is designed to guide you through
-              your struggles, whether it s overcoming stress, managing anxiety.
-            </p>
-            <Link
-              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                message
-              )}`}
-              target="_blank"
-            >
-              <button className="bg-white hover:bg-customLightgreen transform duration-300 hover:text-white text-customGreen font-semibold px-5 py-2 rounded-full w-fit ">
-                Chat Now
-              </button>
-            </Link>
-          </div>
-        </div> */}
           <div className="z-10 w-11/12 sm:w-10/12 ">
             <ImageCarousel/>
           </div>
