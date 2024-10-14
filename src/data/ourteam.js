@@ -1,28 +1,25 @@
 import { FaUserMd, FaBrain, FaUserFriends, FaHandsHelping } from 'react-icons/fa';
+import Councellor1 from "../../public/Councellors/Councellor1.png"
+import Councellor2 from "../../public/Councellors/Councellor2.png"
 
 export const professionals = [
   {
     id: 1,
-    name: "Dr. Amanda White",
-    occupation: "Psychologist",
-    icon: <FaBrain />,
+    img:Councellor1,
+    name: "Mukesh Vaid",
+    age:"48",
+    education1:" Diploma in Counselling and Psychotherapy",
+    experience:"12",
+    occupation: "Counselor",
   },
   {
     id: 2,
-    name: "John Davis",
-    occupation: "Counselor",
-    icon: <FaHandsHelping />,
-  },
-  {
-    id: 3,
-    name: "Dr. Rachel Green",
+    img:Councellor2,
+    name: "Daalia Chhakrborty",
+    age:"33",
+    education1:" Bachelor of Engineering, ",
+    education2:" Diploma in Counseling and Psychotherapy",
+    experience:"12",
     occupation: "Psychologist",
-    icon: <FaUserMd />,
   },
-  {
-    id: 4,
-    name: "Emily Brown",
-    occupation: "Counselor",
-    icon: <FaUserFriends />,
-  }
 ];
