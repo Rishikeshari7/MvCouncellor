@@ -1,16 +1,17 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ourNumbers } from "@/data/SubscriptionData";
 import Image from "next/image";
 import Plan1 from "../../../public/Plan1.png";
 import Plan2 from "../../../public/Plan2.png";
 import Plan3 from "../../../public/Plan3.png";
 import { FaCircleCheck } from "react-icons/fa6";
+import Payment from "./Payment";
 
 const OurNumberAndPlans = () => {
   // State to manage selected plan
   const [selectedPlanId, setSelectedPlanId] = useState(2); // Initially selecting Pro plan (id: 2)
-
+  const [isPrice,setPrice]=useState(null)
   // Plans array
   const plans = [
     {
@@ -87,13 +88,20 @@ const OurNumberAndPlans = () => {
       btnText: "text-white",
     },
   ];
+  // const clickHandler=(e)=>{
+  //   console.log("cli",e)
+  // }
 
   // Function to handle plan selection
   const handlePlanSelection = (planId) => {
     setSelectedPlanId(planId);
   };
+  useEffect(()=>{
+    console.log("Price",isPrice)
+  },[isPrice])
 
   return (
+    <>
     <div className="flex flex-col text-black/80 justify-center items-center ">
       {/* Our Number */}
       <div className="flex w-full justify-center items-center bg-yellow-50 border border-yellow-300">
@@ -195,9 +203,10 @@ const OurNumberAndPlans = () => {
 
                 {/* Section 4 */}
                 <button
+                onClick={()=>setPrice(data.price)}
   className={`flex justify-center items-center py-3 rounded-full mt-3 sm:mt-5 font-bold ${styles.btnBg}`}
 >
-  <span className={isSelected ? "bg-clip-text text-transparent bg-custom-gradient" : "text-white"}>
+  <span  className={isSelected ? "bg-clip-text text-transparent bg-custom-gradient" : "text-white"}>
     Get started
   </span>
 </button>
@@ -208,6 +217,10 @@ const OurNumberAndPlans = () => {
         </div>
       </div>
     </div>
+          {
+            isPrice && (<Payment isPrice={isPrice} setPrice={setPrice}/>)
+          }
+    </>
   );
 };
 

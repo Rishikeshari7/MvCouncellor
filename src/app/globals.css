@@ -193,7 +193,7 @@ table {
   display: inline;
 }
 .custom-gradient-orange {
-  background: -webkit-linear-gradient(#de6d0b, #d3c71a);
+  background: -webkit-linear-gradient(#de6d0b, #be68c0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline;
