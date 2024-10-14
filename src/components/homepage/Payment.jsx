@@ -2,26 +2,26 @@ import React, { useState } from 'react';
 import { FaWhatsapp, FaTimes } from 'react-icons/fa';
 import QRCode from "../../../public/Councellors/QRCode.jpg";
 import Image from 'next/image';
-import { toast } from 'react-hot-toast'; // Import toast
+import { toast } from 'react-hot-toast'; 
 
 const Payment = ({ isPrice, setPrice }) => {
-  const [paymentRef, setPaymentRef] = useState(""); // State to hold payment reference number
+  const [paymentRef, setPaymentRef] = useState(""); 
 
   const handleWhatsAppRedirect = () => {
     if (paymentRef.trim() === "") {
-      // Show toast notification if payment reference is empty
+      
       toast.error("Please provide the payment reference number.");
       return;
     }
 
-    const whatsappNumber = "+919958680332"; // Replace with actual WhatsApp number
-    const message = `Hello, I have made the payment of ${isPrice}. Here is my payment reference number: ${paymentRef}`;
+    const whatsappNumber = "+919958680332"; 
+    const message = `Hello, I have made the payment of *${isPrice}*. Here is my payment reference number: *${paymentRef}*`;
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank");
   };
 
   return (
     <div className='fixed inset-0 z-[1000] grid place-items-center bg-white bg-opacity-30 backdrop-blur-sm'>
-      <div className='bg-custom-gradient3 rounded-xl mx-5 p-4 md:p-7'>
+      <div className='bg-custom-gradient3 rounded-xl m-5 p-4 md:p-7'>
         <div className='bg-white/80 rounded-xl border border-yellow-200 p-5 py-7 flex flex-col gap-4'>
           <div className='flex justify-center flex-col items-center gap-2'>
             <p className=' text-2xl md:text-4xl font-bold'>Confirm Your Payment</p>
@@ -36,16 +36,16 @@ const Payment = ({ isPrice, setPrice }) => {
             )}
           </div>
           
-          {/* QR Code Image */}
+
           <div className='flex justify-center'>
             <Image 
-              src={QRCode} // Replace with your actual QR code image path
+              src={QRCode} 
               alt='QR Code' 
               className=' w-52 h-52 md:w-[17rem] md:h-[19rem] rounded-xl shadow-lg md:shadow-xl '
             />
           </div>
 
-          {/* Input for Payment Reference Number */}
+
           <div className='flex flex-col gap-2'>
             <label htmlFor='payment-ref' className='font-medium text-sm md:text-base'>
               Payment Reference Number
@@ -60,14 +60,14 @@ const Payment = ({ isPrice, setPrice }) => {
             />
           </div>
 
-          {/* WhatsApp Button */}
+
           <button 
             onClick={handleWhatsAppRedirect} 
             className='bg-green-500 hover:bg-green-600 text-white text-sm md:text-base font-semibold px-4 py-2 rounded-lg flex items-center justify-center'>
             <FaWhatsapp className='mr-2' /> Contact on WhatsApp
           </button>
 
-          {/* Cancel Button with Icon */}
+
           <button 
             onClick={() => setPrice(null)} 
             className='bg-red-500 hover:bg-red-600 text-white text-sm md:text-base font-semibold px-4 py-2 rounded-lg flex items-center justify-center'>
