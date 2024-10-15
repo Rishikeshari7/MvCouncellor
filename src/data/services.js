@@ -1,6 +1,6 @@
 import { AiOutlineStop, AiOutlineSmile, AiOutlineControl } from 'react-icons/ai';
 import { FaHandshake } from 'react-icons/fa';
-
+import { GiBookshelf } from 'react-icons/gi'; 
  export const services = [
   {
     id: 1,
@@ -25,6 +25,12 @@ import { FaHandshake } from 'react-icons/fa';
     title: "Marital Life Issues",
     description: "We offer couples counseling to address communication breakdowns, rebuild.",
     icon: <FaHandshake />,
+  },
+  {
+    id: 5,
+    title: "Child Philosopher",
+    description: "We nurture the curious minds of children through philosophical discussions, helping them explore deep questions.",
+    icon: <GiBookshelf />, 
   }
 ];
 

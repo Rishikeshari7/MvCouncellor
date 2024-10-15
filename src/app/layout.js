@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
         {/* Google Translate Widget */}
         <div className="flex flex-col max-w-screen overflow-hidden">
           <div ><Navbar /></div>
-          <div className="min-h-[70vh]">{children}</div>
+          <div className="">{children}</div>
           <div><Footer /></div>
         </div>
         <Toaster/>

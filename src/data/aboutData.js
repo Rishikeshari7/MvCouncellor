@@ -1,14 +1,15 @@
 export const aboutData = [
     {
-        id: 1,
-        items: ["SEO Marketing", "SEO Services", "Pay Per Click", "Social Media", "SEO Audit"]
+      id: 1,
+      items: ["Therapy Services", "Mental Health Resources", "Counseling", "Support Groups", "Workshops & Webinars"]
     },
     {
-        id: 2,
-        items: ["Our Product", "Documentation", "Our Services", "Company", "What We Do?"]
+      id: 2,
+      items: ["Our Approach", "FAQs", "Client Testimonials", "Meet Our Team", "Mental Health Blog"]
     },
     {
-        id: 3,
-        items: ["Home", "About Us", "Main Services", "Pricing", "Our Cases"]
+      id: 3,
+      items: ["Home", "About Us", "Services", "Contact", "Book an Appointment"]
     }
-];
+  ];
+  

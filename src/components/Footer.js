@@ -3,56 +3,64 @@ import Image from "next/image";
 import Logo2 from "../../public/Logo2.png";
 import { FiMessageSquare } from "react-icons/fi";
 import { MdOutlineLocationOn } from "react-icons/md";
-import { FaTwitter, FaInstagram, FaWhatsapp, FaFacebook, FaLinkedin } from "react-icons/fa";
-import {aboutData} from "@/data/aboutData"
+import {
+  FaTwitter,
+  FaInstagram,
+  FaWhatsapp,
+  FaFacebook,
+  FaLinkedin,
+} from "react-icons/fa";
+import { aboutData } from "@/data/aboutData";
+import { SiFreelancermap } from "react-icons/si";
+import { SiFreelancer } from "react-icons/si";
 
 const Footer = () => {
   const contactDetails = [
     {
       id: 1,
-      title: "9024225444",
-      desc: "info@digitalera.com",
+      title: "8295417017",
+      desc: "info@mvmentalcare.com",
       icons: <FiMessageSquare />,
     },
     {
       id: 2,
-      title: "27 Division St, New York, NY",
-      desc: "10002, United Statesnfo@digitalera.com",
+      title: "Zirakpur , Mohali District,",
+      desc: "140603, Punjab, India",
       icons: <MdOutlineLocationOn />,
     },
   ];
   const socialIcons = [
     {
-        id: 1,
-        name: "Twitter",
-        icon: <FaTwitter />,
-        url: "https://twitter.com",
+      id: 1,
+      name: "Twitter",
+      icon: <FaTwitter />,
+      url: "https://twitter.com",
     },
     {
-        id: 2,
-        name: "Instagram",
-        icon: <FaInstagram />,
-        url: "https://instagram.com",
+      id: 2,
+      name: "Instagram",
+      icon: <FaInstagram />,
+      url: "https://instagram.com",
     },
     {
-        id: 3,
-        name: "WhatsApp",
-        icon: <FaWhatsapp />,
-        url: "https://whatsapp.com",
+      id: 3,
+      name: "WhatsApp",
+      icon: <FaWhatsapp />,
+      url: "https://whatsapp.com",
     },
     {
-        id: 4,
-        name: "Facebook",
-        icon: <FaFacebook />,
-        url: "https://facebook.com",
+      id: 4,
+      name: "Facebook",
+      icon: <FaFacebook />,
+      url: "https://facebook.com",
     },
     {
-        id: 5,
-        name: "LinkedIn",
-        icon: <FaLinkedin />,
-        url: "https://linkedin.com",
-    }
-];
+      id: 5,
+      name: "LinkedIn",
+      icon: <FaLinkedin />,
+      url: "https://linkedin.com",
+    },
+  ];
   return (
     <div className="bg-[#efefea] text-customYellowtext2 flex justify-center items-center ">
       <div className="flex w-10/12 flex-col gap-3 sm:gap-5 my-5 sm:my-10 ">
@@ -80,48 +88,72 @@ const Footer = () => {
         {/* 2 */}
         <div className="flex justify-between gap-8 items-start my-2 pr-10 sm:pr-20">
           <div className="flex  flex-col items-start justify-between gap-3">
-            <p className="max-w-72 text-[0.75rem] sm:text-sm ">
-              Ewebot have much planned for the future, working with great
-              clients and continued software development.
+            <p className="max-w-96 text-[0.75rem] sm:text-sm ">
+              MV Mental Care focuses on addressing mental health challenges like
+              addiction, stress, anger, and relationship issues, providing
+              personalized support. We do our best to ensure your well-being and
+              are always here to help you in any situation.
             </p>
             <div className="flex  gap-3 items-center justify-between">
-                {
-                    socialIcons.map(data=>(
-                        <div key={data.id} title={data.name} >{data.icon}</div>
-                    ))
-                }
+              {socialIcons.map((data) => (
+                <div key={data.id} title={data.name}>
+                  {data.icon}
+                </div>
+              ))}
             </div>
           </div>
-          {aboutData.map(data => (
-        <div key={data.id} className={`flex ${data.id === 1 && "hidden md:block"} ${data.id === 2 && "hidden custom:block"} text-sm flex-col`}>
-          {/* Default layout for screens above sm */}
-          <div className="hidden sm:block">
-            {data.items.map((item, index) => (
-              <p key={index}>{item}</p>
-            ))}
-          </div>
+          {aboutData.map((data) => (
+            <div
+              key={data.id}
+              className={`flex ${data.id === 1 && "hidden md:block"} ${
+                data.id === 2 && "hidden custom:block"
+              } text-sm flex-col`}
+            >
+              {/* Default layout for screens above sm */}
+              <div className="">
+                {data.items.map((item, index) => (
+                  <p key={index}>{item}</p>
+                ))}
+              </div>
 
-          {/* Layout for screens below sm */}
-          <div className="block sm:hidden">
-            {/* Split the items into two halves */}
-            <div className="grid text-[0.75rem] sm:text-sm grid-cols-2 gap-4">
-              <div>
-                {data.items.slice(0, Math.ceil(data.items.length / 3)).map((item, index) => (
-                  <p key={index}>{item}</p>
-                ))}
-              </div>
-              <div>
-                {data.items.slice(Math.ceil(data.items.length / 3)).map((item, index) => (
-                  <p key={index}>{item}</p>
-                ))}
+              {/* Layout for screens below sm */}
+              <div className="block sm:hidden">
+                {/* Split the items into two halves */}
+                {/* <div className="grid text-[0.75rem] sm:text-sm grid-cols-2 gap-4">
+                  <div>
+                    {data.items
+                      .slice(0, Math.ceil(data.items.length / 3))
+                      .map((item, index) => (
+                        <p key={index}>{item}</p>
+                      ))}
+                  </div>
+                  <div>
+                    {data.items
+                      .slice(Math.ceil(data.items.length / 3))
+                      .map((item, index) => (
+                        <p key={index}>{item}</p>
+                      ))}
+                  </div>
+                </div> */}
+                <div className="grid text-[0.75rem] sm:text-sm grid-cols-2 gap-4">
+
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      ))}
+          ))}
         </div>
         <div className="flex flex-1 border-t border-black/30 rounded-full"></div>
-        <p className="text-sm" >© 2023 — All Rights Reserved.</p>
+        <div className="flex justify-between">
+          <p className="text-sm">© 2023 — All Rights Reserved.</p>
+
+          <p className="flex gap-1 items-center">
+            Developed By{" "}
+            <strong className="custom-gradient-orange">
+              Perfect Service Provider{" "}
+            </strong>{" "}
+            <SiFreelancer className="text-red-700" />{" "}
+          </p>
+        </div>
       </div>
     </div>
   );
