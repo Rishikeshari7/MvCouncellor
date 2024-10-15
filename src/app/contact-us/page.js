@@ -77,19 +77,19 @@ const Page = () => {
           <ul className='mt-4 space-y-2'>
             <li>
               <span className='font-semibold'>Email:</span>{' '}
-              <a href='mailto:support@example.com' className=' hover:underline'>
-                support@example.com
+              <a href='mailto:info@mvmentalcare.com' className=' hover:underline'>
+              info@mvmentalcare.com
               </a>
             </li>
             <li>
               <span className='font-semibold'>Phone:</span>{' '}
-              <a href='tel:+911234567890' className=' hover:underline'>
-                +91 123 456 7890
+              <a href='tel:+918295417017' className=' hover:underline'>
+              +91 82954 17017
               </a>
             </li>
             <li>
               <span className='font-semibold'>Address:</span>{' '}
-              123 Green Lane, EcoCity, India
+              Zirakpur , Mohali District , 140603, Punjab, India
             </li>
           </ul>
         </div>

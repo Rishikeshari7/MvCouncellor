@@ -25,14 +25,14 @@ const MiddleSection = () => {
           ></Image>
           <div className="absolute -bottom-12 left-14 text-gray-900 gap-5 flex justify-between p-3 md:p-5 w-[80%] bg-custom-gradient2">
             <div className="flex flex-col sm:flex-row justify-center items-start  sm:gap-3 md:w-[40%]">
-              <p className=" text-2xl sm:text-4xl md:text-5xl font-bold">10</p>
+              <p className=" text-2xl sm:text-4xl md:text-5xl font-bold">12+</p>
               <p className="text-sm sm:text-base ">
                 YEARS OF EXPERIENCE
               </p>
             </div>
             <div className=" my-2 w-[2px] border-l-[2px] border-caribbeangreen-500"></div>
             <div className="flex flex-col sm:flex-row justify-center items-  sm:gap-3 md:w-[45%]">
-              <p className=" text-2xl sm:text-4xl md:text-5xl font-bold">500+</p>
+              <p className=" text-2xl sm:text-4xl md:text-5xl font-bold">300+</p>
               <p className="text-sm sm:text-base ">
               CLIENTS SUPPORTED
               </p>
