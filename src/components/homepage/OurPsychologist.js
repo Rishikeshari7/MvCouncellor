@@ -36,7 +36,7 @@ const OurPsychologist = () => {
             <p><span>Experience: </span><span  className=''>{data.experience}<span className='custom-gradient-orange font-semibold'>+ Years</span></span></p>
             <p><span>Occupation: </span><strong className='custom-gradient-orange'>{data.occupation}</strong></p>
             
-            <div className='flex col-span-2 gap-2'><span>Education: </span>  <div className='text-sm' >
+            <div className='flex col-span-2 gap-2'><span>Education: </span>  <div className='text-[10px] my-auto sm:text-sm' >
             <p >{data.education1} </p> {data.education2 && (<p>{data.education2}</p>)}
             </div>
            </div>

@@ -8,15 +8,15 @@ const PsychologistAndCustomers = () => {
         <p className="text-xl sm:text-3xl md:text-5xl font-bold">Our Happy Customers</p>
         <div className="w-full sm:w-[95%] flex flex-col justify-center items-center mx-auto gap-5">
           <div className="marquee-container  w-full p-4 ">
-            <div className="marquee-content flex w-full gap-4 items-stretch justify-between">
+            <div className="marquee-content hover: flex w-full gap-4 items-stretch justify-between">
               {/* Duplicate the reviews for seamless scrolling */}
               {customerReviews.map((data) => (
                 <div
                   key={data.id}
-                  className="bg-yellow-100 shadow-md sm:shadow-md sm:shadow-yellow-200 mx-auto flex py-3 overflow-hidden sm:p-5 flex-col items-center rounded-2xl min-w-[18rem] max-h-[14rem] sm:min-w-64 sm:max-h-80 md:min-w-64 md:max-h-80"
+                  className={` ${data.id<4 && "hidden sm:flex"}  scrollbar bg-yellow-100 shadow-md sm:shadow-md sm:shadow-yellow-200 mx-auto flex pt-3 p-2 overflow-hidden sm:p-5 sm:px-2 flex-col items-center rounded-2xl min-w-[18rem] max-h-[14rem] sm:min-w-64 sm:max-h-80 md:min-w-64 md:max-h-[22rem] `}
                 >
                   <div className='flex w-full gap-2 pl-1 pr-1'>
-                    <div className="flex justify-center items-center border-yellow-500 border-[1px] rounded-full overflow-hidden w-14 h-14">
+                    <div className="flex mb-2 justify-center items-center border-yellow-500 border-[1px] rounded-full overflow-hidden w-14 h-14">
                       <img
                         src={data.image}
                         alt={data.name}
@@ -28,8 +28,8 @@ const PsychologistAndCustomers = () => {
                       <p className="text-left text-sm">{data.occupation}</p>
                     </div>
                   </div>
-                  <div>
-                    <p className="font-medium text-sm sm:text-lg pl-1 pr-1 text-black/70 mt-4 mx-[6px]">{data.comment}</p>
+                  <div className='scrollbar overflow-auto' >
+                    <p className="  font-medium text-sm sm:text-lg pl-1 pr-1 text-black/70 mt-2 mx-[6px]">{data.comment}</p>
                   </div>
                 </div>
               ))}
