@@ -146,13 +146,15 @@ const Footer = () => {
         <div className="flex justify-between">
           <p className="text-sm">© 2023 — All Rights Reserved.</p>
 
-          <p className="flex gap-1 items-center">
+          <div className="flex flex-col md:flex-row  md:gap-1 md:items-center">
             Developed By{" "}
-            <strong className="custom-gradient-orange">
+            <p className="flex items-center gap-1">
+            <strong className="custom-gradient-orange ">
               Perfect Service Provider{" "}
-            </strong>{" "}
-            <SiFreelancer className="text-red-700" />{" "}
-          </p>
+            </strong>
+            <SiFreelancer className="text-red-700" />
+            </p>
+          </div>
         </div>
       </div>
     </div>

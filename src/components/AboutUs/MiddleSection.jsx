@@ -8,7 +8,7 @@ const MiddleSection = () => {
     <div className="flex bg-gray-100 justify-center items-center">
     <div className="w-10/12">
       <div className="flex flex-col md:flex-row justify-between gap-8 mt-12 md:mt-20 mb-16 ">
-        <p className="text-2xl sm:text-2xl md:text-4xl font-semibold gap-2 sm:pt-2">
+        <p className="text-xl sm:text-2xl md:text-4xl font-semibold gap-2 sm:pt-2">
         Achieve Emotional Balance and Wellness with{" "}
           <BlueText text={" Professional Guidance. "} classN={"custom-gradient-yellow"} />{" "}
         </p>
