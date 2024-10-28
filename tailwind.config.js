@@ -85,6 +85,8 @@ module.exports = {
           "linear-gradient(150deg, #FFF3A2 15%, #C7A84E 80%, #FEFEE0 99%)",
         "custom-gradient4":
           "linear-gradient(180deg, rgba(252,251,162,0.3) 0%, rgba(192,163,74,0.3) 100%)",
+          "custom-gradient5":
+           "linear-gradient(to right, #FAF89F, #FFFFFF)",
       },
     },
   },

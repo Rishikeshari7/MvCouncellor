@@ -3,7 +3,7 @@ import React from 'react'
 const Serviceprovide = () => {
   return (
     <div  className="w-full pt-7 md:p-3 bg-customLightyellow">
-        <div className="w-full min-h-[300px]  flex md:flex-row  md:justify-around md:items-center md:gap-0   flex-col gap-4 items-center justify-center  mt-4  p-3  rounded-xl ">
+        <div className="w-full min-h-[560px]  rounded-l-full bg-black  flex md:flex-row  md:justify-around md:items-center md:gap-0   flex-col gap-4 items-center justify-center  mt-4  p-3  rounded-xl ">
       <div className="">
         <img  src="https://th.bing.com/th/id/OIP.9nho_Y2TqYiXvI0uk6amCgHaDt?rs=1&pid=ImgDetMain" className=" w-[400px]  h-[300px]"/>
       </div>
