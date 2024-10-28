@@ -8,7 +8,7 @@ const PsychologistAndCustomers = () => {
         <p className="text-xl sm:text-3xl md:text-5xl font-bold">Our Happy Customers</p>
         <div className="w-full sm:w-[95%] flex flex-col justify-center items-center mx-auto gap-5">
           <div className="marquee-container  w-full p-4 ">
-            <div className="marquee-content hover: flex w-full gap-4 items-stretch justify-between">
+            <div className="marquee-content flex w-[120rem] md:w-full gap-4 items-stretch justify-between">
               {/* Duplicate the reviews for seamless scrolling */}
               {customerReviews.map((data) => (
                 <div
