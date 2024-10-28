@@ -1,10 +1,11 @@
+import Image from 'next/image'
 import React from 'react'
-
+import Serviceprovide from '@/components/Services/Serviceprovide'
 const page = () => {
   return (
-    <div>
-      services (Under maintainance)
-    </div>
+   <div>
+     <Serviceprovide/>
+   </div>
   )
 }
 
