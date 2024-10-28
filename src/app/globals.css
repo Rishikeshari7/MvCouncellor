@@ -33,6 +33,9 @@ body {
   display: flex;
   animation: marquee 22s linear infinite;
 }
+.marquee-content:hover {
+  animation-play-state: paused; /* Pause animation on hover */
+}
 
 .marquee-container::before,
 .marquee-container::after {
@@ -71,6 +74,31 @@ body {
   100% {
     transform: translateX(-100%);
   }
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 1px; /* Sets the scrollbar width for WebKit browsers */
+  position: absolute;
+}
+.scrollbar::-webkit-scrollbar {
+  width: 1px; /* Sets the scrollbar width for WebKit browsers */
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: rgba(87, 77, 2, 0.1); /* Track color */
+  border-radius: 5px; /* Rounded track corners */
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #e2e608; /* Thumb color */
+  border-radius: 5px; /* Rounded thumb corners */
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(176, 176, 13); /* Thumb hover color */
+}
+.marquee-content:hover {
+  animation-play-state: paused; /* Pause animation on hover */
 }
 
 @layer base {

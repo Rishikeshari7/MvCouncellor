@@ -64,7 +64,7 @@ export default function RootLayout({ children }) {
  
   return (
     <html lang="en">
-    <Head>
+    {/* <Head>
       <title>{metadata.title}</title>
       <meta name="description" content={metadata.description} />
       <meta property="og:title" content="Mv Councellor"/>
@@ -72,7 +72,7 @@ export default function RootLayout({ children }) {
       <meta property="og:image" content="/Logo.jpg"/> 
       <meta property="og:url" content="https://mv-councellor.vercel.app" />
       <meta property="og:type" content="website" />
-    </Head>
+    </Head> */}
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {/* Google Translate Widget */}
         <div className="flex flex-col max-w-screen overflow-hidden">

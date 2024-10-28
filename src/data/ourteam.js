@@ -20,7 +20,7 @@ export const professionals = [
     age:"33",
     education1:" Bachelor of Engineering , ",
     education2:" Diploma in Counseling and Psychotherapy",
-    experience:"12",
+    experience:"6",
     occupation: "Psychologist",
   },
   {
@@ -30,6 +30,6 @@ export const professionals = [
     age:"36",
     education1:" PG Diploma in Child psychology",
     experience:"4",
-    occupation: "Psychologist",
+    occupation: "Child Counselor",
   },
 ];
