@@ -77,8 +77,8 @@ const Page = () => {
           <ul className='mt-4 space-y-2'>
             <li>
               <span className='font-semibold'>Email:</span>{' '}
-              <a href='mailto:info@mvmentalcare.com' className=' hover:underline'>
-              info@mvmentalcare.com
+              <a href='mailto:Info@mvcounsellor.com' className=' hover:underline'>
+              Info@mvcounsellor.com
               </a>
             </li>
             <li>
