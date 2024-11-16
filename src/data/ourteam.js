@@ -21,7 +21,7 @@ export const professionals = [
     education1:" Bachelor of Engineering , ",
     education2:" Diploma in Counseling and Psychotherapy",
     experience:"6",
-    occupation: "Psychologist",
+    occupation: "Counselor",
   },
   {
     id: 3,
