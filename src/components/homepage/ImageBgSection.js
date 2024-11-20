@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import { FaClipboardCheck, FaCalendarAlt } from "react-icons/fa";
@@ -5,10 +6,11 @@ import { BsWhatsapp } from "react-icons/bs";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import Link from "next/link";
 import { services } from "@/data/services";
-
+import { useRouter } from "next/navigation";
 import ImageCarousel from "../carousel/ImageCarousel";
 
 const ImageBgSection = () => {
+  const router = useRouter();
   const counselorOptions = [
     {
       id: 1,
@@ -35,8 +37,26 @@ const ImageBgSection = () => {
       bgColor: "bg-orange-400",
     },
   ];
-  const whatsappNumber = "9260960495";
+  const whatsappNumber = "8295417017";
   const message = "Hello! I'd like to know more about your services.";
+  const handleClick = (id) => {
+    console.log("Id=",id)
+    console.log("Clicked")
+    if (id === 1) {
+      // Redirect to WhatsApp
+      window.open(
+        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
+        "_blank"
+      );
+    } else if (id === 2) {
+      // Trigger phone call
+      window.open("tel:8295417017");
+    } else {
+      // Redirect to services page
+      router.push("/contact-us");
+    }
+  };
+
   return (
     <div className=" bg-custom-gradient w-full flex flex-col justify-center items-center flex-1 overflow-clip ">
       <div className="flex flex-col justify-center items-center w-full overflow-hidden ">
@@ -48,6 +68,7 @@ const ImageBgSection = () => {
             <div
               key={data.id}
               className="bg-white shadow-xl  mx-auto flex py-3 sm:p-5 flex-col justify-between items-center rounded-2xl w-36 h-32  sm:w-48 sm:h-52  md:w-60 md:h-48"
+              onClick={() => handleClick(data.id)}
             >
               <div
                 className={`flex justify-center items-center ${data.bgColor} rounded-full w-14 h-14 sm:w-24 sm:h-24 md:w-28 md:h-28 `}
@@ -63,33 +84,6 @@ const ImageBgSection = () => {
           ))}</div>
         </div>
       </div>
-      {/* <div className="flex flex-col text-black/80 gap-6 sm:gap-10 justify-center w-full mt-10 sm:mt-20 py-8 sm:py-14 items-center flex-1 bg-yellow-50 border-2 border-yellow-200 ">
-      <p className=" text-xl sm:text-3xl md:text-5xl font-bold " >Your Path to Mental Wellness</p>
-      <div className=" w-11/12 sm:w-10/12 flex flex-col justify-center items-center mx-auto gap-5">
-        <div className=" grid grid-cols-2 sm:flex w-full flex-wrap gap-4 items-stretch justify-between">
-          {services.map((data) => (
-            <div
-              key={data.id}
-              className="bg-white gap-1 shadow-md sm:shadow-2xl mx-auto flex py-3 sm:p-5 flex-col justify-between items-center rounded-2xl w-[9.5rem] h-52  sm:w-64 sm:h-80  md:w-64 md:h-80"
-            >
-              <div
-                className={`flex justify-center items-center p-5 sm:p-10 bg-custom-gradient rounded-full w-14 h-14 sm:w-24 sm:h-24 md:w-28 md:h-28 `}
-              >
-                <span className=" text-3xl sm:text-6xl   text-white">
-                  {data.icon}
-                </span>
-              </div>
-              <p className="font-bold text-center text-sm sm:text-xl  mx-1 sm:mt-4">
-                {data.title}
-              </p>
-              <p className="font-medium text-center text-sm sm:text-lg text-customGreen mx-[6px] sm:mt-4">
-                {data.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-      </div> */}
       <div className="flex flex-col text-black/80 gap-6 sm:gap-10 justify-center w-full mt-10 sm:mt-20 py-8 sm:py-14 items-center flex-1 bg-yellow-50 border-2 border-yellow-200">
   <p className="text-xl sm:text-3xl md:text-5xl font-bold text-center">
     Your Path to Mental Wellness
