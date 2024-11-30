@@ -75,12 +75,16 @@ export default function RootLayout({ children }) {
     </Head> */}
         <Head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16784800410"></script>
-        <script>
+            <script
+      dangerouslySetInnerHTML={{
+        __html: `
           window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)}
+          function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'AW-16784800410');
-        </script>
+        `,
+      }}
+    />
         </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {/* Google Translate Widget */}
