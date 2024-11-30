@@ -73,15 +73,15 @@ export default function RootLayout({ children }) {
       <meta property="og:url" content="https://mv-councellor.vercel.app" />
       <meta property="og:type" content="website" />
     </Head> */}
-        <head>
+        <Head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16784800410"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
+          function gtag(){dataLayer.push(arguments)}
           gtag('js', new Date());
           gtag('config', 'AW-16784800410');
         </script>
-        </head>
+        </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {/* Google Translate Widget */}
         <div className="flex flex-col max-w-screen overflow-hidden">
