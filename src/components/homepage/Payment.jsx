@@ -14,7 +14,7 @@ const Payment = ({ isPrice, setPrice }) => {
       return;
     }
 
-    const whatsappNumber = "+919958680332"; 
+    const whatsappNumber = "+918295417017"; 
     const message = `Hello, I have made the payment of *${isPrice}*. Here is my payment reference number: *${paymentRef}*`;
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank");
   };

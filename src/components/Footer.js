@@ -19,7 +19,7 @@ const Footer = () => {
     {
       id: 1,
       title: "8295417017",
-      desc: "info@mvmentalcare.com",
+      desc: "Info@mvcounsellor.com",
       icons: <FiMessageSquare />,
     },
     {
