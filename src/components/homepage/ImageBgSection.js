@@ -1,13 +1,12 @@
-"use client"
-import React from "react";
-import Image from "next/image";
-import { FaClipboardCheck, FaCalendarAlt } from "react-icons/fa";
-import { BsWhatsapp } from "react-icons/bs";
-import { MdOutlinePhoneInTalk } from "react-icons/md";
-import Link from "next/link";
+"use client";
 import { services } from "@/data/services";
 import { useRouter } from "next/navigation";
+import { BsWhatsapp } from "react-icons/bs";
+import { FaCalendarAlt, FaClipboardCheck } from "react-icons/fa";
+import { MdOutlinePhoneInTalk } from "react-icons/md";
 import ImageCarousel from "../carousel/ImageCarousel";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const ImageBgSection = () => {
   const router = useRouter();
@@ -40,8 +39,8 @@ const ImageBgSection = () => {
   const whatsappNumber = "8295417017";
   const message = "Hello! I'd like to know more about your services.";
   const handleClick = (id) => {
-    console.log("Id=",id)
-    console.log("Clicked")
+    console.log("Id=", id);
+    console.log("Clicked");
     if (id === 1) {
       // Redirect to WhatsApp
       window.open(
@@ -57,62 +56,119 @@ const ImageBgSection = () => {
     }
   };
 
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 1400 },
+      items: 5,
+    },
+    LargeDesktop: {
+      breakpoint: { max: 1400, min: 1024 },
+      items: 4,
+    },
+    desktop: {
+      breakpoint: { max: 1200, min: 768 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 768, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 600, min: 0 },
+      items: 1,
+    },
+  };
   return (
     <div className=" bg-custom-gradient w-full flex flex-col justify-center items-center flex-1 overflow-clip ">
       <div className="flex flex-col justify-center items-center w-full overflow-hidden ">
-          <div className="z-10 w-11/12 sm:w-10/12 ">
-            <ImageCarousel/>
-          </div>
+        <div className="z-10 w-11/12 sm:w-10/12 ">
+          <ImageCarousel />
+        </div>
         <div className=" z-20 mt-[-4rem] xl:mt-[-5rem] w-full justify-center items-center">
-          <div className="w-10/12 mx-auto grid grid-cols-2 sm:flex flex-wrap justify-between gap-4">{counselorOptions.map((data) => (
-            <div
-              key={data.id}
-              className="bg-white shadow-xl  mx-auto flex py-3 sm:p-5 flex-col justify-between items-center rounded-2xl w-36 h-32  sm:w-48 sm:h-52  md:w-60 md:h-48"
-              onClick={() => handleClick(data.id)}
-            >
+          <div className="w-10/12 mx-auto grid grid-cols-2 sm:flex flex-wrap justify-between gap-4">
+            {counselorOptions.map((data) => (
               <div
-                className={`flex justify-center items-center ${data.bgColor} rounded-full w-14 h-14 sm:w-24 sm:h-24 md:w-28 md:h-28 `}
+                key={data.id}
+                className="bg-white shadow-xl  mx-auto flex py-3 sm:p-5 flex-col justify-between items-center rounded-2xl w-36 h-32  sm:w-48 sm:h-52  md:w-60 md:h-48"
+                onClick={() => handleClick(data.id)}
               >
-                <span className=" text-3xl sm:text-6xl text-white">
-                  {data.icon}
-                </span>
+                <div
+                  className={`flex justify-center items-center ${data.bgColor} rounded-full w-14 h-14 sm:w-24 sm:h-24 md:w-28 md:h-28 `}
+                >
+                  <span className=" text-3xl sm:text-6xl text-white">
+                    {data.icon}
+                  </span>
+                </div>
+                <p className="font-semibold text-center text-sm sm:text-lg text-customGreen mx-1 sm:mt-4">
+                  {data.name}
+                </p>
               </div>
-              <p className="font-semibold text-center text-sm sm:text-lg text-customGreen mx-1 sm:mt-4">
-                {data.name}
-              </p>
-            </div>
-          ))}</div>
+            ))}
+          </div>
         </div>
       </div>
       <div className="flex flex-col text-black/80 gap-6 sm:gap-10 justify-center w-full mt-10 sm:mt-20 py-8 sm:py-14 items-center flex-1 bg-yellow-50 border-2 border-yellow-200">
-  <p className="text-xl sm:text-3xl md:text-5xl font-bold text-center">
-    Your Path to Mental Wellness
-  </p>
-  
-  <div className="w-11/12 sm:w-10/12 flex flex-col justify-center items-center mx-auto gap-5">
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch justify-between w-full">
-      {services.map((data) => (
-        <div
-          key={data.id}
-          className="bg-white gap-2 shadow-md sm:shadow-2xl mx-auto  flex py-5 flex-col justify-evenly items-center rounded-2xl w-full max-w-[14rem] sm:max-w-[18rem] md:max-w-[20rem] h-52 sm:h-80 md:h-[20rem]"
-        >
-          <div className="flex justify-center items-center p-5 sm:p-10 bg-custom-gradient rounded-full w-14 h-14 sm:w-24 sm:h-24 md:w-28 md:h-28">
-            <span className="text-3xl sm:text-6xl text-white">
-              {data.icon}
-            </span>
-          </div>
-          <p className="font-bold text-center text-sm sm:text-xl mt-2 sm:mt-3 mx-2">
-            {data.title}
-          </p>
-          <p className="font-medium text-center text-xs sm:text-lg text-customGreen mx-2 sm:mt-2">
-            {data.description}
-          </p>
-        </div>
-      ))}
-    </div>
-  </div>
-</div>
+        <p className="text-xl sm:text-3xl md:text-5xl font-bold text-center">
+          Your Path to Mental Wellness
+        </p>
 
+        <div className="w-11/12 sm:w-10/12 hidden md:flex flex-col justify-center items-center mx-auto gap-5">
+          <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch justify-between w-full">
+            {services.map((data) => (
+              <div
+                key={data.id}
+                className="bg-white gap-2 shadow-md sm:shadow-2xl mx-auto  flex py-5 flex-col justify-evenly items-center rounded-2xl w-full max-w-[14rem] sm:max-w-[18rem] md:max-w-[20rem] h-52 sm:h-80 md:h-[20rem]"
+              >
+                <div className="flex justify-center items-center p-5 sm:p-10 bg-custom-gradient rounded-full w-14 h-14 sm:w-24 sm:h-24 md:w-28 md:h-28">
+                  <span className="text-3xl sm:text-6xl text-white">
+                    {data.icon}
+                  </span>
+                </div>
+                <p className="font-bold text-center text-sm sm:text-xl mt-2 sm:mt-3 mx-2">
+                  {data.title}
+                </p>
+                <p className="font-medium text-center text-xs sm:text-lg text-customGreen mx-2 sm:mt-2">
+                  {data.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* //Carousel Below Sm */}
+        <div className="w-11/12 sm:w-[95%] block md:hidden">
+          <Carousel
+            responsive={responsive}
+            autoPlay
+            autoPlaySpeed={2000}
+            infinite
+            pauseOnHover
+            draggable
+            keyBoardControl={true}
+            arrows={false}
+            transitionDuration={500}
+            itemClass="flex justify-center items-center gap-5"
+          >
+            {services.map((data) => (
+              <div
+                key={data.id}
+                className="bg-white gap-2 shadow-sm mx-auto  flex py-5 flex-col justify-evenly items-center rounded-2xl w-full max-w-[14rem] sm:max-w-[18rem] md:max-w-[20rem] h-52 sm:h-80 md:h-[20rem]"
+              >
+                <div className="flex justify-center items-center p-5 sm:p-10 bg-custom-gradient rounded-full w-14 h-14 sm:w-24 sm:h-24 md:w-28 md:h-28">
+                  <span className="text-3xl sm:text-6xl text-white">
+                    {data.icon}
+                  </span>
+                </div>
+                <p className="font-bold text-center text-sm sm:text-xl mt-2 sm:mt-3 mx-2">
+                  {data.title}
+                </p>
+                <p className="font-medium text-center text-xs sm:text-lg text-customGreen mx-2 sm:mt-2">
+                  {data.description}
+                </p>
+              </div>
+            ))}
+          </Carousel>
+        </div>
+      </div>
     </div>
   );
 };

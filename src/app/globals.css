@@ -235,3 +235,11 @@ table {
 
 /* --------------------------------------------------------------------------------------------- */
 /* Styles for the horizontal scroll container */
+
+.carousel-item-gap {
+  display: flex; /* Adjust the gap size */
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+ }
+ 
