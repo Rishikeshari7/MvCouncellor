@@ -41,6 +41,8 @@ import Navbar from "@/components/Navbar";
 import localFont from "next/font/local";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
+import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 // Load custom fonts
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -72,7 +74,7 @@ export default function RootLayout({ children }) {
       <meta property="og:url" content="https://mv-councellor.vercel.app" />
       <meta property="og:type" content="website" />
     </Head> */}
-        <Head>
+        {/* <Head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16784800410"></script>
             <script
       dangerouslySetInnerHTML={{
@@ -84,7 +86,10 @@ export default function RootLayout({ children }) {
         `,
       }}
     />
-        </Head>
+        </Head> */}
+        <GoogleTagManager gtmId="AW-16784800410"
+        gtmScriptUrl="https://www.googletagmanager.com/gtag/js?id=AW-16784800410"
+         />
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {/* Google Translate Widget */}
         <div className="flex flex-col max-w-screen overflow-hidden">
@@ -94,6 +99,7 @@ export default function RootLayout({ children }) {
         </div>
         <Toaster/>
       </body>
+      {/* <GoogleAnalytics gaId="AW-16784800410" /> */}
     </html>
   );
 }
