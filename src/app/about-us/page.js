@@ -3,6 +3,7 @@ import TopSection from '@/components/AboutUs/TopSection'
 import ReviewForm from '@/components/AboutUs/UserReviewForm'
 import OurPsychologist from '@/components/homepage/OurPsychologist'
 import PsychologistAndCustomers from '@/components/homepage/PsychologistAndCustomers'
+import CertificateSection from '@/components/AboutUs/CertificateSection'
 import React from 'react'
 
 
@@ -11,6 +12,7 @@ const page = () => {
     <div>
     <TopSection/>
     <MiddleSection/>
+    <CertificateSection/>
     <OurPsychologist/>
     <PsychologistAndCustomers/>
     <ReviewForm/>
