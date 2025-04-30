@@ -13,11 +13,26 @@ export async function POST(request) {
     const image = formData.get("image");
 
     //Upload Image Cloudinary;
-    const data = await ImageUpload(image);
+    // const data = await ImageUpload(image);
+    let imageUrl;
+
+    // If user uploaded an image
+    if (image && typeof image === "object" && image.size > 0) {
+      const data = await ImageUpload(image);
+      imageUrl = data.secure_url;
+    } else {
+      // No image uploaded by user, use default icon
+      imageUrl = "https://cdn-icons-png.flaticon.com/512/847/847969.png"; // <-- Your default user icon URL
+    }
 
     //Save Review to Database
-    await dbConnect()
-    const newReview = await Review.create({name,comment,occupation,image:data.secure_url})
+    await dbConnect();
+    const newReview = await Review.create({
+      name,
+      comment,
+      occupation,
+      image: imageUrl,
+    });
     return NextResponse.json(
       { success: true, message: "Review submitted successfully!" },
       { status: 200 }

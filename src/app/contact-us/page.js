@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
-
+import ResponsiveIframe from '@/components/contact-us/ResponsiveIframe';
 const Page = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -188,6 +188,7 @@ const Page = () => {
             </button>
           </div>
         </form>
+        <ResponsiveIframe/>
       </div>
     </div>
   );

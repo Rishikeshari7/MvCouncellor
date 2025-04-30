@@ -19,10 +19,7 @@ const ReviewForm = () => {
   const onSubmit = async (data) => {
     const { name, comment, occupation, isPublished, image } = data;
 
-    if (!selectedImage) {
-      toast.error("Please upload an image.");
-      return;
-    }
+
 
     let toastId;
     try {
@@ -32,7 +29,7 @@ const ReviewForm = () => {
       formData.append("name", name);
       formData.append("comment", comment);
       formData.append("occupation", occupation);
-      formData.append("image", document.getElementById("fileUpload").files[0]);
+      formData.append("image", document.getElementById("fileUpload").files[0] || "");
 
       const response = await fetch("/api/user-review", {
         method: "POST",

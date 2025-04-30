@@ -125,12 +125,14 @@
 
 // --------------------------------------------------------------------------------------------------------
 "use client";
-import React from "react";
+import React,{useEffect,useState} from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { customerReviews } from "@/data/review";
 
+
 const PsychologistAndCustomers = () => {
+  const [allReview,setReviews]=useState([]);
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1400 },
@@ -154,7 +156,24 @@ const PsychologistAndCustomers = () => {
     },
   };
 
+
+  useEffect(()=>{
+    fetchReview()
+  },[])
+  const fetchReview = async()=>{
+    try{
+      const res = await fetch("/api/get-review");
+      const data = await res.json()
+      console.log("data-",data);
+      setReviews(data.data)
+    }
+    catch(err){
+      // toast.error("Erro")
+      console.error("Failed to Fetch Review")
+    }
+  }
   return (
+
     <div className="flex flex-col justify-center items-center mt-8 sm:mt-14 gap-10" >
     <p className="text-xl sm:text-3xl md:text-5xl font-bold">Our Happy Customers</p>
     <div className=" w-11/12 sm:w-[95%] " >
@@ -170,7 +189,7 @@ const PsychologistAndCustomers = () => {
         transitionDuration={500}
         itemClass="flex justify-center items-center gap-5"
       >
-        {customerReviews.map((data) => (
+        {allReview.map((data) => (
           <div
             key={data.id}                                                                         
             className="scrollbar bg-yellow-100 shadow-md sm:shadow-yellow-200 flex py-3 p-2 overflow-hidden sm:p-4 lg:px-5 flex-col items-center rounded-2xl w-[95%]"
